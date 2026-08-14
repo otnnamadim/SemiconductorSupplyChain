@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Semiconductor AI Chip Taxonomy: Ecosystem Map, Leading Companies, and Demand Drivers | Aperture Insights</title>
+<meta name="description" content="A company-level map of the AI semiconductor taxonomy with the top 2-5 public companies detailed within each node (logic, memory, signal, power, discrete) to understand the supply chain. The key market drivers which which determine demand are included along with an explanation of how each node fits into the AI infrastructure and data center ecosystems.">
+<style>
+:root {
+--paper:#090d1a; --navy:#01032d; --panel:#11162b; --lavender:#ccc2f6;
+--grey-1:#d9d9d9; --grey-2:#c6cbd1; --grey-4:#8a929b; --rule:#232c48; --warm:#d85a30;
+--digital:#8aa9d6; --memory:#d99bce; --analog:#9fd0a0; --discrete:#8fd6c4;
+}
+* { box-sizing:border-box; }
+body { margin:0; background:var(--paper); color:var(--grey-4);
+font-family:Georgia,"Times New Roman",serif; padding:40px 24px 64px; }
+main { max-width:1080px; margin:0 auto; }
+.eyebrow { font-family:"Helvetica Neue",Arial,sans-serif; font-size:12px; letter-spacing:.12em;
+text-transform:uppercase; color:var(--grey-1); margin:0 0 8px; }
+h1 { font-size:clamp(27px,4vw,34px); font-weight:400; line-height:1.25; color:var(--lavender);
+margin:0 0 6px; letter-spacing:-.01em; }
+.byline { font-family:"Helvetica Neue",Arial,sans-serif; font-size:13px; color:var(--grey-4); margin:0 0 20px; }
+.byline a { color:var(--lavender); text-decoration:none; }
+.intro { font-family:"Helvetica Neue",Arial,sans-serif; font-size:14.5px; color:var(--grey-2);
+max-width:78ch; line-height:1.7; }
+.intro strong { color:var(--grey-1); font-weight:600; }
+.prelim-banner { font-family:"Helvetica Neue",Arial,sans-serif; border-left:3px solid var(--warm);
+padding:10px 14px; margin:22px 0 0; background:rgba(216,90,48,.10); font-size:13px; color:#e9a488; line-height:1.6; }
+.controls { display:flex; gap:8px; align-items:center; flex-wrap:wrap; margin:26px 0 8px; padding:14px 0;
+border-top:1px solid var(--rule); border-bottom:1px solid var(--rule);
+position:sticky; top:0; background:var(--paper); z-index:5; }
+.controls .label { font-family:"Helvetica Neue",Arial,sans-serif; font-size:11px; letter-spacing:.1em;
+text-transform:uppercase; color:var(--grey-4); margin-right:4px; }
+.branch-chip { font-family:"Helvetica Neue",Arial,sans-serif; border:1px solid var(--rule);
+background:none; border-radius:999px; padding:5px 13px; font-size:13px; cursor:pointer; color:var(--grey-2);
+text-decoration:none; display:inline-flex; align-items:center; gap:6px; }
+.branch-chip::before { content:""; width:9px; height:9px; border-radius:50%; background:var(--c); }
+.branch-chip:hover { border-color:var(--c); color:var(--grey-1); }
+section { margin-top:12px; scroll-margin-top:72px; }
+.branch-head { font-family:"Helvetica Neue",Arial,sans-serif; font-size:12px; letter-spacing:.14em;
+text-transform:uppercase; margin:48px 0 0; padding-top:28px; border-top:1px solid var(--rule);
+color:var(--bc); font-weight:600; display:flex; align-items:center; gap:9px; }
+.branch-head::before { content:""; width:11px; height:11px; border-radius:2px; background:var(--bc); }
+.branch-sub { font-family:"Helvetica Neue",Arial,sans-serif; font-size:13.5px; color:var(--grey-4);
+max-width:80ch; line-height:1.7; margin:8px 0 0; }
+h2 { font-family:"Helvetica Neue",Arial,sans-serif; font-size:17px; font-weight:600; color:var(--lavender);
+margin:30px 0 6px; padding-top:0; }
+h2 .node-tag { font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--grey-4);
+font-weight:600; margin-left:10px; }
+.narrative { font-family:"Helvetica Neue",Arial,sans-serif; color:var(--grey-2); max-width:80ch;
+margin:0 0 6px; font-size:13.5px; line-height:1.7; }
+.narrative strong { color:var(--grey-1); font-weight:600; }
+.driver { font-family:"Helvetica Neue",Arial,sans-serif; font-size:12.5px; color:var(--grey-4);
+max-width:80ch; line-height:1.6; margin:8px 0 0; }
+.driver b { color:var(--lavender); font-weight:600; letter-spacing:.04em; text-transform:uppercase; font-size:11px; }
+.table-scroll { overflow-x:auto; margin-top:14px; }
+table { font-family:"Helvetica Neue",Arial,sans-serif; border-collapse:collapse; width:100%; font-size:13px; }
+th, td { text-align:left; padding:9px 12px; border-bottom:1px solid var(--rule); vertical-align:top; }
+th { font-size:11px; letter-spacing:.07em; text-transform:uppercase; color:var(--grey-4); font-weight:600; white-space:nowrap; }
+td { color:var(--grey-2); line-height:1.55; }
+td.tick { font-weight:600; color:var(--grey-1); border-left:3px solid var(--bc); white-space:nowrap; }
+td.co { color:var(--grey-1); font-weight:600; white-space:nowrap; }
+.commentary { font-family:"Helvetica Neue",Arial,sans-serif; margin:20px 0 0; padding:16px 18px; max-width:84ch;
+background:var(--panel); border-left:3px solid var(--lavender); border-radius:0 8px 8px 0; }
+.commentary h4 { font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--lavender); margin:0 0 10px; font-weight:600; }
+.commentary p { color:var(--grey-2); font-size:13.5px; line-height:1.7; margin:0 0 10px; }
+.commentary p:last-child { margin-bottom:0; }
+.commentary strong { color:var(--grey-1); font-weight:600; }
+.stat-row { display:flex; gap:30px; flex-wrap:wrap; margin:20px 0 4px; }
+.stat { font-family:"Helvetica Neue",Arial,sans-serif; }
+.stat .big { font-size:28px; font-weight:600; color:var(--lavender); letter-spacing:-.5px; }
+.stat .lab { font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--grey-4); margin-top:2px; }
+.stat .fine { font-size:11.5px; color:var(--grey-4); margin-top:2px; max-width:24ch; line-height:1.5; }
+footer { font-family:"Helvetica Neue",Arial,sans-serif; margin-top:52px; padding-top:20px; border-top:1px solid var(--rule);
+font-size:12px; color:var(--grey-4); max-width:84ch; line-height:1.7; }
+footer code { color:var(--grey-2); }
+@media (max-width:640px){ body { padding:28px 16px 48px; } .stat-row { gap:20px; } }
+</style>
+</head>
+<body>
+<main>
+<p class="eyebrow">AI Infrastructure & Data Center Ecosystem · Market Structure </p>
+<h1>The AI Semiconductor Taxonomy: Overview</h1>
+<p class="byline"><a href="https://www.otnnamadim.com">Aperture Insights</a> · Published on August 14, 2026</p>
+
+<p class="intro">An AI server rack is not one chip but a stack of specialized ones, each drawn from a different branch of the semiconductor family tree. This page takes the taxonomy in <strong>Figure&nbsp;3</strong> &mdash; the Digital / Analog / Discrete structure of AI silicon &mdash; and, for each node, names the <strong>2&ndash;5 public companies that lead it</strong>, the <strong>market driver</strong> that sets demand for that block, and <strong>how it fits the ecosystem</strong> around it. The organizing spine is the diagram's own, not a flat four-bucket list: logic and memory sit under Digital; signal and power under Analog; optoelectronics, power transistors, and sensors under Discrete.</p>
+
+<p class="intro" style="margin-top:14px">Read it as a map of <strong>where the AI-infrastructure dollar lands</strong> as it moves from the grid, through power conversion, into compute and memory, and back out across the network. A company can occupy more than one node &mdash; Nvidia is compute <em>and</em> networking; Broadcom is custom compute <em>and</em> networking <em>and</em> optics; Infineon spans analog power <em>and</em> discrete transistors &mdash; so these are functional positions, not clean corporate boxes.</p>
+
+<p class="prelim-banner">This is a summarized educational map of market structure, <strong>not investment advice</strong> and not a recommendation of any security. Company placements are indicative of business focus and role within the ecosystem and not an exhaustive list. Tickers are given for identification only. and US listings where one exists, home-market or ADR lines otherwise (e.g. <strong>IFNNY</strong> for Infineon, <strong>SSNLF/005930.KS</strong> for Samsung).</p>
+
+<div class="controls" role="group" aria-label="Jump to branch">
+<span class="label">Jump to</span>
+<a class="branch-chip" style="--c:var(--digital)" href="#digital">Digital</a>
+<a class="branch-chip" style="--c:var(--memory)" href="#memory">Memory / Storage</a>
+<a class="branch-chip" style="--c:var(--analog)" href="#analog">Analog</a>
+<a class="branch-chip" style="--c:var(--discrete)" href="#discrete">Discrete</a>
+</div>
+
+<!-- =================== DIGITAL =================== -->
+<section id="digital" style="--bc:var(--digital)">
+<p class="branch-head" style="--bc:var(--digital)">Digital · Logic</p>
+<p class="branch-sub">Chips that compute, control, and move binary data. In this branch the AI dollar is largest and growth is steepest &mdash; it contains the accelerators that do the training and inference, the host processors that orchestrate them, and (per the report's Note&nbsp;3) the networking silicon that ties racks together.</p>
+
+<h2>Parallel accelerators <span class="node-tag">GPUs · AI accelerators · ASICs · FPGAs</span></h2>
+<p class="narrative">The engine room of the buildout: chips that run thousands of operations at once for training and inference. The defining contest is <strong>merchant GPU vs. custom ASIC</strong> &mdash; Nvidia's general-purpose platform against hyperscaler-specific silicon designed by Broadcom and Marvell.</p>
+<div class="table-scroll"><table>
+<thead><tr><th>Ticker</th><th>Company</th><th>Position in node</th><th>What it wins on</th></tr></thead>
+<tbody>
+<tr><td class="tick">NVDA</td><td class="co">Nvidia</td><td>Dominant merchant GPU (Blackwell, Rubin); the platform standard</td><td>CUDA software lock-in; full rack-scale systems, not just chips</td></tr>
+<tr><td class="tick">AVGO</td><td class="co">Broadcom</td><td>Custom AI ASICs (XPUs) for hyperscalers; the leading merchant-ASIC partner</td><td>Cheaper, power-tuned silicon for a customer's one workload at volume</td></tr>
+<tr><td class="tick">AMD</td><td class="co">AMD</td><td>Instinct MI-series &mdash; the credible #2 merchant accelerator</td><td>Memory capacity per chip; buyers wanting a second source to Nvidia</td></tr>
+<tr><td class="tick">MRVL</td><td class="co">Marvell</td><td>Custom compute silicon (e.g. Amazon Trainium) plus the connecting IP</td><td>Custom-silicon design wins tied to its networking/optics content</td></tr>
+<tr><td class="tick">LSCC</td><td class="co">Lattice</td><td>Small-FPGA leader; reconfigurable logic for control-plane and inference</td><td>Low-power programmability where fixed silicon is overkill</td></tr>
+</tbody>
+</table></div>
+<p class="driver"><b>Demand driver</b> &nbsp;AI training and inference compute &mdash; hyperscaler capex and model scale. This is the single line item pulling the whole chain; every other node on this page exists to feed, power, connect, or cool an accelerator.</p>
+
+<h2>Serial processors <span class="node-tag">CPUs · host / orchestration</span></h2>
+<p class="narrative">General-purpose chips that execute sequentially and <strong>orchestrate</strong> the accelerators &mdash; every GPU tray still needs a host CPU to schedule work and manage I/O. Smaller and slower-growing than the accelerator node, but structurally attached to it: accelerator units sold pull CPU attach with them.</p>
+<div class="table-scroll"><table>
+<thead><tr><th>Ticker</th><th>Company</th><th>Position in node</th><th>What it wins on</th></tr></thead>
+<tbody>
+<tr><td class="tick">AMD</td><td class="co">AMD</td><td>EPYC server CPUs; the share-gaining incumbent-challenger in data center</td><td>Core count and performance-per-watt; pairs with its own Instinct GPUs</td></tr>
+<tr><td class="tick">INTC</td><td class="co">Intel</td><td>Xeon &mdash; the installed-base incumbent defending share</td><td>Enterprise footprint, x86 compatibility, breadth of SKUs</td></tr>
+<tr><td class="tick">ARM</td><td class="co">Arm Holdings</td><td>IP licensor behind Nvidia's Grace/Vera and hyperscaler custom CPUs</td><td>Power-efficient architecture; royalty on nearly every custom core</td></tr>
+<tr><td class="tick">QCOM</td><td class="co">Qualcomm</td><td>Client/edge CPU leader probing the data-center door</td><td>Efficiency heritage from mobile; edge-inference positioning</td></tr>
+</tbody>
+</table></div>
+<p class="driver"><b>Demand driver</b> &nbsp;Attach to accelerators plus general cloud/enterprise server refresh. Grows with the fleet, but as a supporting role &mdash; the value per rack is migrating toward the accelerator and away from the host.</p>
+
+<h2>Networking silicon <span class="node-tag">filed under Logic per Note 3</span></h2>
+<p class="narrative">The connective tissue: switch and interconnect chips that let thousands &mdash; soon millions &mdash; of accelerators behave as one machine. As clusters grow, this stops being plumbing and becomes the <strong>bottleneck</strong>, which is why it is one of the most contested nodes on the board.</p>
+<div class="table-scroll"><table>
+<thead><tr><th>Ticker</th><th>Company</th><th>Position in node</th><th>What it wins on</th></tr></thead>
+<tbody>
+<tr><td class="tick">AVGO</td><td class="co">Broadcom</td><td>Merchant switch-silicon leader (Tomahawk/Jericho); scale-out Ethernet</td><td>Open-standard Ethernet fabric; the default for non-Nvidia clusters</td></tr>
+<tr><td class="tick">NVDA</td><td class="co">Nvidia</td><td>InfiniBand, Spectrum-X Ethernet, and NVLink scale-up (ex-Mellanox)</td><td>Tight GPU-to-fabric integration; NVLink as a captive scale-up moat</td></tr>
+<tr><td class="tick">ALAB</td><td class="co">Astera Labs</td><td>Rack-scale connectivity &mdash; PCIe/CXL retimers, Scorpio fabric switches</td><td>Signal integrity inside the rack; a pure-play on GPU density</td></tr>
+<tr><td class="tick">MRVL</td><td class="co">Marvell</td><td>Data-center interconnect, custom fabrics, and electro-optics content</td><td>Bundling custom compute with the links between the chips</td></tr>
+<tr><td class="tick">ANET</td><td class="co">Arista Networks</td><td>Switch <em>systems</em> (built on merchant silicon) for AI back-end networks</td><td>Software (EOS) and large-cluster operational track record</td></tr>
+</tbody>
+</table></div>
+<p class="driver"><b>Demand driver</b> &nbsp;Cluster scale-up and scale-out &mdash; rising GPU counts and data rates per link. Networking content per accelerator grows as models get distributed across more chips, so this node compounds faster than raw GPU units alone.</p>
+</section>
+
+<!-- =================== MEMORY =================== -->
+<section id="memory" style="--bc:var(--memory)">
+<p class="branch-head" style="--bc:var(--memory)">Digital · Memory / Storage</p>
+<p class="branch-sub">Stores, retrieves, and feeds data to compute. The AI-critical distinction sits inside this branch: <strong>HBM</strong> (fast memory packaged beside the GPU) is the true bottleneck and the pricing power; <strong>NAND</strong> is bulk storage for the datasets &mdash; related, but a different rung with different economics.</p>
+
+<h2>Memory makers <span class="node-tag">HBM · DRAM · NAND · SRAM</span></h2>
+<p class="narrative">A near-consolidated field. The scarce, margin-rich product is <strong>HBM</strong> &mdash; capacity has been effectively sold out, and each new GPU generation stacks more of it. That scarcity is why memory has swung from commodity to kingmaker in the AI cycle.</p>
+<div class="table-scroll"><table>
+<thead><tr><th>Ticker</th><th>Company</th><th>Position in node</th><th>What it wins on</th></tr></thead>
+<tbody>
+<tr><td class="tick">000660.KS</td><td class="co">SK Hynix</td><td>HBM share leader; lead qualified supplier into Nvidia</td><td>First-mover HBM yield and the Nvidia qualification lead</td></tr>
+<tr><td class="tick">MU</td><td class="co">Micron</td><td>HBM + DRAM ramping fast; the US-listed memory play</td><td>Power efficiency claims on HBM; domestic-supply positioning</td></tr>
+<tr><td class="tick">005930.KS</td><td class="co">Samsung</td><td>Scale memory maker racing to close the HBM qualification gap</td><td>Manufacturing scale and vertical breadth (memory + foundry)</td></tr>
+<tr><td class="tick">SNDK</td><td class="co">SanDisk</td><td>NAND / flash storage (spun out of Western Digital, 2025)</td><td>Bulk data-lake storage for training corpora &mdash; the other rung</td></tr>
+</tbody>
+</table></div>
+<p class="driver"><b>Demand driver</b> &nbsp;HBM: bytes and bandwidth per accelerator &mdash; set directly by GPU roadmaps (more stacks, taller stacks each generation). NAND: the size of the datasets being retained and served. HBM is capacity-gated, so it behaves less like a commodity and more like a co-designed component of the GPU itself.</p>
+</section>
+
+<!-- =================== ANALOG =================== -->
+<section id="analog" style="--bc:var(--analog)">
+<p class="branch-head" style="--bc:var(--analog)">Analog</p>
+<p class="branch-sub">Chips that regulate power, manage heat, and convert real-world signals for the digital infrastructure. Lower unit prices than accelerators, but high attach counts &mdash; a rack needs many of these, and as power density climbs, the power sub-node has become a genuine AI story rather than a sleepy analog line.</p>
+
+<h2>Power management <span class="node-tag">PMICs · voltage regulators</span></h2>
+<p class="narrative">Converts and delivers clean, high-current power to the GPU at the <strong>point of load</strong>. As accelerators draw more current at lower voltages, the precision and density of this delivery becomes a gating constraint &mdash; and the content per GPU rises with it.</p>
+<div class="table-scroll"><table>
+<thead><tr><th>Ticker</th><th>Company</th><th>Position in node</th><th>What it wins on</th></tr></thead>
+<tbody>
+<tr><td class="tick">MPWR</td><td class="co">Monolithic Power</td><td>Fast-growing power-delivery supplier into AI GPU boards</td><td>High-density integrated power modules; design-ins on flagship GPUs</td></tr>
+<tr><td class="tick">TXN</td><td class="co">Texas Instruments</td><td>Broadest analog/power catalog; content across the whole rack</td><td>Breadth, in-house manufacturing, and ubiquity of design sockets</td></tr>
+<tr><td class="tick">ADI</td><td class="co">Analog Devices</td><td>High-performance power plus the signal chain around it</td><td>Precision and the ability to bundle power with signal content</td></tr>
+<tr><td class="tick">IFNNY</td><td class="co">Infineon</td><td>Power management that bridges into its discrete-transistor strength</td><td>End-to-end "grid-to-GPU" coverage across analog and discrete</td></tr>
+</tbody>
+</table></div>
+<p class="driver"><b>Demand driver</b> &nbsp;Power delivered per rack and the efficiency of delivering it &mdash; rising GPU wattage plus the industry push to waste less energy converting it. Power-management content per accelerator is climbing, making this one of analog's few high-growth AI pockets.</p>
+
+<h2>Signal &amp; interface <span class="node-tag">data converters · clocks · timing</span></h2>
+<p class="narrative">Manages the boundary between analog reality and digital logic &mdash; converting signals and keeping chips <strong>synchronized</strong>. As data rates climb, precise timing and signal integrity move from afterthought to enabler; this is the node the flat "four-bucket" view of the market usually omits.</p>
+<div class="table-scroll"><table>
+<thead><tr><th>Ticker</th><th>Company</th><th>Position in node</th><th>What it wins on</th></tr></thead>
+<tbody>
+<tr><td class="tick">ADI</td><td class="co">Analog Devices</td><td>High-performance data converters and signal-chain leadership</td><td>Precision at the top end of the ADC/DAC market</td></tr>
+<tr><td class="tick">TXN</td><td class="co">Texas Instruments</td><td>Volume data-converter and interface catalog across the system</td><td>Breadth and availability across countless design sockets</td></tr>
+<tr><td class="tick">SITM</td><td class="co">SiTime</td><td>MEMS timing &mdash; precision clocks and oscillators for high-speed links</td><td>Timing accuracy and resilience over legacy quartz</td></tr>
+<tr><td class="tick">ALAB</td><td class="co">Astera Labs</td><td>Signal-integrity silicon (retimers) &mdash; arguably a cleaner fit here</td><td>Keeping high-speed links clean as reach and rates increase</td></tr>
+</tbody>
+</table></div>
+<p class="driver"><b>Demand driver</b> &nbsp;Link speeds and I/O density &mdash; every jump in data rate raises the bar for conversion, clocking, and signal integrity. Demand tracks the number and speed of high-speed interfaces in the rack, not just the number of GPUs.</p>
+</section>
+
+<!-- =================== DISCRETE =================== -->
+<section id="discrete" style="--bc:var(--discrete)">
+<p class="branch-head" style="--bc:var(--discrete)">Discrete Devices</p>
+<p class="branch-sub">Standalone components that each perform one function. Two sub-nodes carry real AI weight: <strong>optoelectronics</strong>, where the photonics interconnect story lives, and <strong>power transistors</strong>, where the shift to high-voltage rack power is playing out. Sensors round out the branch as the infrastructure's monitoring layer.</p>
+
+<h2>Optoelectronics <span class="node-tag">photonics · optical interconnect</span></h2>
+<p class="narrative">Devices that convert electrical signals to light and back &mdash; the substrate of <strong>optical interconnect</strong>. As copper hits its reach-and-power limits between racks, optics (and co-packaged optics) become structural, not optional. Nvidia has committed on the order of <strong>$4B</strong> to secure this supply, a signal of how load-bearing the node has become.</p>
+<div class="table-scroll"><table>
+<thead><tr><th>Ticker</th><th>Company</th><th>Position in node</th><th>What it wins on</th></tr></thead>
+<tbody>
+<tr><td class="tick">COHR</td><td class="co">Coherent</td><td>Optical transceivers and lasers for data-center interconnect</td><td>Vertical integration from laser chips up to modules</td></tr>
+<tr><td class="tick">LITE</td><td class="co">Lumentum</td><td>Lasers and optical components; a named Nvidia photonics partner</td><td>Laser-source supply as transceiver volumes scale</td></tr>
+<tr><td class="tick">AVGO</td><td class="co">Broadcom</td><td>Optical DSPs and co-packaged optics tied to its switch silicon</td><td>Owning the switch <em>and</em> the optics that feed it</td></tr>
+<tr><td class="tick">MRVL</td><td class="co">Marvell</td><td>Electro-optics and optical DSPs for high-speed links</td><td>Optical content bundled with its interconnect franchise</td></tr>
+</tbody>
+</table></div>
+<p class="driver"><b>Demand driver</b> &nbsp;Interconnect bandwidth and reach at data-center scale &mdash; the point at which electrons through copper become too lossy or power-hungry, and light takes over. Rising cluster size pulls optics content up faster than GPU units.</p>
+
+<h2>Power transistors <span class="node-tag">GaN · SiC · discrete power</span></h2>
+<p class="narrative">Single-function devices that switch and convert high power efficiently. The catalyst here is the move to <strong>800V HVDC</strong> rack architectures &mdash; wide-bandgap materials (GaN, SiC) that carry AI-scale power with far less copper and loss than legacy silicon.</p>
+<div class="table-scroll"><table>
+<thead><tr><th>Ticker</th><th>Company</th><th>Position in node</th><th>What it wins on</th></tr></thead>
+<tbody>
+<tr><td class="tick">IFNNY</td><td class="co">Infineon</td><td>Discrete power leader across the grid-to-GPU chain</td><td>Scale, breadth, and depth in both silicon and wide-bandgap power</td></tr>
+<tr><td class="tick">NVTS</td><td class="co">Navitas</td><td>GaN/SiC pure-play; named collaborator on Nvidia's 800V HVDC</td><td>Wide-bandgap focus aimed squarely at next-gen rack power</td></tr>
+<tr><td class="tick">ON</td><td class="co">onsemi</td><td>Silicon-carbide supplier for high-power conversion</td><td>Vertically integrated SiC for power-dense systems</td></tr>
+<tr><td class="tick">STM</td><td class="co">STMicroelectronics</td><td>Broad SiC and power-discrete portfolio</td><td>Manufacturing scale across power and wide-bandgap</td></tr>
+</tbody>
+</table></div>
+<p class="driver"><b>Demand driver</b> &nbsp;The 800V power transition and total rack wattage &mdash; higher voltage cuts copper and loss, and wide-bandgap devices are what make it work. Note the cross-current: as an emerging theme, the near-term 800V TAM is debated even as the long-run direction is clear.</p>
+
+<h2>Sensors &amp; transducers <span class="node-tag">monitoring · current sensing · thermal</span></h2>
+<p class="narrative">Devices that detect and convert physical signals into data &mdash; the <strong>monitoring layer</strong> of the data center. Less directly tied to AI compute than the other discrete nodes, but rising with the buildout as denser, hotter, higher-power racks need more telemetry to run safely.</p>
+<div class="table-scroll"><table>
+<thead><tr><th>Ticker</th><th>Company</th><th>Position in node</th><th>What it wins on</th></tr></thead>
+<tbody>
+<tr><td class="tick">TEL</td><td class="co">TE Connectivity</td><td>Sensors and connectivity for infrastructure and thermal systems</td><td>Breadth across sensing and the connectors around it</td></tr>
+<tr><td class="tick">STM</td><td class="co">STMicroelectronics</td><td>MEMS and sensor portfolio spanning the physical layer</td><td>MEMS scale and integration</td></tr>
+<tr><td class="tick">IFNNY</td><td class="co">Infineon</td><td>Current-sensing and monitoring that pairs with its power content</td><td>Bundling sensing with the power devices it already sells</td></tr>
+</tbody>
+</table></div>
+<p class="driver"><b>Demand driver</b> &nbsp;Rack density, power, and thermal load &mdash; hotter, denser deployments need more environmental, current, and thermal sensing. Demand scales with facility buildout and cooling complexity rather than compute directly.</p>
+</section>
+
+<!-- =================== SYNTHESIS =================== -->
+<section id="synthesis" style="--bc:var(--lavender)">
+<p class="branch-head" style="--bc:var(--lavender)">The dollar's path through the stack</p>
+<div class="stat-row">
+<div class="stat"><div class="big">Compute</div><div class="lab">Deepest pool · steepest growth</div><div class="fine">Accelerators + memory absorb most of the AI capex per rack</div></div>
+<div class="stat"><div class="big">Connect</div><div class="lab">Compounding faster than units</div><div class="fine">Networking + optics content rises as clusters scale up and out</div></div>
+<div class="stat"><div class="big">Power</div><div class="lab">Emerging, gated by density</div><div class="fine">Power mgmt + wide-bandgap discretes ride the 800V transition</div></div>
+</div>
+<div class="commentary"><h4>How to read the map</h4>
+<p>Follow one dollar of AI-infrastructure spend and it traces the taxonomy in order: it enters through <strong>discrete power transistors</strong> converting grid power, is refined by <strong>analog power management</strong> at the board, spent mostly on <strong>digital accelerators and HBM memory</strong> doing the work, and routed back out through <strong>networking and optics</strong> to the next rack &mdash; with <strong>signal, timing, and sensors</strong> keeping the whole thing coherent. The value concentrates heavily at the compute and memory nodes; the surrounding nodes are smaller per unit but attach in high multiples and, for networking and optics, grow <em>faster</em> than GPU count as clusters get larger.</p>
+<p><strong>Two structural cautions.</strong> First, leadership here is a matter of degree and moves &mdash; HBM qualification, ASIC design wins, and the 800V transition are all live contests, not settled ones. Second, several names span nodes, so a single company's exposure to "AI" is a blend across this map rather than a single line. Upstream of everything shown sits the equipment and foundry layer (ASML's lithography, TSMC's fabrication) that makes every one of these chips physically possible.</p>
+</div>
+</section>
+
+<footer>A company-level companion to the AI-chip taxonomy in Figure&nbsp;3. Node structure follows the report's Digital / Analog / Discrete classification, including its Note&nbsp;3 treatment of networking under Logic. Company placements reflect business focus and are indicative, not exhaustive; a firm may lead in one node and participate in several. Tickers identify securities for reference only. <code>Not investment advice</code> &mdash; this page illustrates market structure from public information and should not be used as the basis for any transaction.</footer>
+</main>
+</body>
+</html>
