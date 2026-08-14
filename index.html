@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Semiconductor AI Chip Taxonomy: Ecosystem Map, Leading Companies, and Demand Drivers | Aperture Insights</title>
-<meta name="description" content="A company-level map of the AI semiconductor taxonomy with the top 2-5 public companies detailed within each node (logic, memory, signal, power, discrete) to understand the supply chain. The key market drivers which which determine demand are included along with an explanation of how each node fits into the AI infrastructure and data center ecosystems.">
+<meta name="description" content="A company-level map of the AI semiconductor taxonomy with the top 2-5 public companies detailed within each node (logic, memory, signal, power, discrete) to understand the supply chain. The key market drivers that determine demand are included along with an explanation of how each node fits into the AI infrastructure and data center ecosystems.">
 <style>
 :root {
 --paper:#090d1a; --navy:#01032d; --panel:#11162b; --lavender:#ccc2f6;
@@ -19,8 +19,12 @@ main { max-width:1080px; margin:0 auto; }
 text-transform:uppercase; color:var(--grey-1); margin:0 0 8px; }
 h1 { font-size:clamp(27px,4vw,34px); font-weight:400; line-height:1.25; color:var(--lavender);
 margin:0 0 6px; letter-spacing:-.01em; }
-.byline { font-family:"Helvetica Neue",Arial,sans-serif; font-size:13px; color:var(--grey-4); margin:0 0 20px; }
+.byline { font-family:"Helvetica Neue",Arial,sans-serif; font-size:13px; color:var(--grey-4); margin:0 0 8px; }
 .byline a { color:var(--lavender); text-decoration:none; }
+.source-note { font-family:"Helvetica Neue",Arial,sans-serif; font-size:12.5px; color:var(--grey-4);
+margin:0 0 20px; max-width:78ch; line-height:1.6; }
+.source-note a { color:var(--lavender); text-decoration:none; border-bottom:1px solid var(--rule); }
+.source-note a:hover { border-color:var(--lavender); }
 .intro { font-family:"Helvetica Neue",Arial,sans-serif; font-size:14.5px; color:var(--grey-2);
 max-width:78ch; line-height:1.7; }
 .intro strong { color:var(--grey-1); font-weight:600; }
@@ -37,6 +41,39 @@ text-decoration:none; display:inline-flex; align-items:center; gap:6px; }
 .branch-chip::before { content:""; width:9px; height:9px; border-radius:50%; background:var(--c); }
 .branch-chip:hover { border-color:var(--c); color:var(--grey-1); }
 section { margin-top:12px; scroll-margin-top:72px; }
+
+/* --- Figure: taxonomy segment map --- */
+.figure-block { background:var(--panel); border:1px solid var(--rule); border-radius:10px;
+padding:20px 20px 16px; margin-top:22px; }
+.figure-block .fig-label { font-family:"Helvetica Neue",Arial,sans-serif; font-size:13px; color:var(--grey-1);
+font-weight:600; margin:0 0 2px; }
+.figure-block .fig-sub { font-family:"Helvetica Neue",Arial,sans-serif; font-size:12px; color:var(--grey-4);
+margin:0 0 18px; line-height:1.5; }
+.taxo-root { font-family:"Helvetica Neue",Arial,sans-serif; text-align:center; border:1px solid var(--lavender);
+border-radius:8px; padding:10px 14px; max-width:420px; margin:0 auto; background:rgba(204,194,246,.06); }
+.taxo-root .t { font-size:13px; font-weight:600; color:var(--lavender); }
+.taxo-root .d { font-size:11.5px; color:var(--grey-4); margin-top:2px; }
+.taxo-stem { width:1px; height:20px; background:var(--rule); margin:0 auto; }
+.taxo-branches { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:14px; }
+@media (max-width:820px){ .taxo-branches { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media (max-width:480px){ .taxo-branches { grid-template-columns:1fr; } }
+.taxo-branch { font-family:"Helvetica Neue",Arial,sans-serif; display:block; text-decoration:none;
+border:1px solid var(--rule); border-top:3px solid var(--bc); border-radius:8px; padding:12px 12px 14px;
+background:var(--paper); transition:border-color .15s; }
+.taxo-branch:hover { border-color:var(--bc); }
+.taxo-branch .bh { font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--bc);
+font-weight:600; margin:0 0 2px; }
+.taxo-branch .bd { font-size:11px; color:var(--grey-4); margin:0 0 10px; line-height:1.45; min-height:2.9em; }
+.taxo-badge { display:inline-block; font-size:10px; letter-spacing:.03em; color:var(--grey-1);
+border:1px solid var(--rule); border-radius:999px; padding:1px 7px; margin:0 0 10px; }
+.taxo-node { font-size:12px; color:var(--grey-2); padding:5px 8px; border-radius:5px;
+background:rgba(255,255,255,.02); border:1px solid var(--rule); margin-top:5px; line-height:1.35; }
+.taxo-node span { color:var(--grey-4); font-size:10.5px; }
+.fig-cap { font-family:"Helvetica Neue",Arial,sans-serif; font-size:11.5px; color:var(--grey-4);
+margin:16px 0 0; line-height:1.6; padding-top:12px; border-top:1px solid var(--rule); }
+.fig-cap a { color:var(--lavender); text-decoration:none; border-bottom:1px solid var(--rule); }
+.fig-cap a:hover { border-color:var(--lavender); }
+
 .branch-head { font-family:"Helvetica Neue",Arial,sans-serif; font-size:12px; letter-spacing:.14em;
 text-transform:uppercase; margin:48px 0 0; padding-top:28px; border-top:1px solid var(--rule);
 color:var(--bc); font-weight:600; display:flex; align-items:center; gap:9px; }
@@ -74,20 +111,23 @@ background:var(--panel); border-left:3px solid var(--lavender); border-radius:0 
 footer { font-family:"Helvetica Neue",Arial,sans-serif; margin-top:52px; padding-top:20px; border-top:1px solid var(--rule);
 font-size:12px; color:var(--grey-4); max-width:84ch; line-height:1.7; }
 footer code { color:var(--grey-2); }
+footer a { color:var(--lavender); text-decoration:none; border-bottom:1px solid var(--rule); }
+footer a:hover { border-color:var(--lavender); }
 @media (max-width:640px){ body { padding:28px 16px 48px; } .stat-row { gap:20px; } }
 </style>
 </head>
 <body>
 <main>
-<p class="eyebrow">AI Infrastructure & Data Center Ecosystem · Market Structure </p>
+<p class="eyebrow">AI Infrastructure &amp; Data Center Ecosystem · Market Structure</p>
 <h1>The AI Semiconductor Taxonomy: Overview</h1>
 <p class="byline"><a href="https://www.otnnamadim.com">Aperture Insights</a> · Published on August 14, 2026</p>
+<p class="source-note">Segment taxonomy adapted from <a href="https://www.semiconductors.org/wp-content/uploads/2026/06/SIA-AI-Data-Center-Report_June-2026.pdf" target="_blank" rel="noopener">SIA &amp; Deloitte, <em>Powering AI: The Semiconductor Ecosystem at the Foundation of Data Centers</em> (June 2026)</a> — see the full report for the detailed teardown, figures, and methodology. Company mapping and demand-driver commentary are Aperture Insights' own.</p>
 
-<p class="intro">An AI server rack is not one chip but a stack of specialized ones, each drawn from a different branch of the semiconductor family tree. This page takes the taxonomy in <strong>Figure&nbsp;3</strong> &mdash; the Digital / Analog / Discrete structure of AI silicon &mdash; and, for each node, names the <strong>2&ndash;5 public companies that lead it</strong>, the <strong>market driver</strong> that sets demand for that block, and <strong>how it fits the ecosystem</strong> around it. The organizing spine is the diagram's own, not a flat four-bucket list: logic and memory sit under Digital; signal and power under Analog; optoelectronics, power transistors, and sensors under Discrete.</p>
+<p class="intro">An AI server rack is not one chip but a stack of specialized ones, each drawn from a different branch of the semiconductor family tree. This page takes the taxonomy in <strong>Figure&nbsp;3</strong> of the SIA/Deloitte report &mdash; the Digital / Analog / Discrete structure of AI silicon &mdash; and, for each node, names the <strong>2&ndash;5 public companies that lead it</strong>, the <strong>market driver</strong> that sets demand for that block, and <strong>how it fits the ecosystem</strong> around it. The organizing spine is the diagram's own, not a flat four-bucket list: logic and memory sit under Digital; signal and power under Analog; optoelectronics, power transistors, and sensors under Discrete.</p>
 
 <p class="intro" style="margin-top:14px">Read it as a map of <strong>where the AI-infrastructure dollar lands</strong> as it moves from the grid, through power conversion, into compute and memory, and back out across the network. A company can occupy more than one node &mdash; Nvidia is compute <em>and</em> networking; Broadcom is custom compute <em>and</em> networking <em>and</em> optics; Infineon spans analog power <em>and</em> discrete transistors &mdash; so these are functional positions, not clean corporate boxes.</p>
 
-<p class="prelim-banner">This is a summarized educational map of market structure, <strong>not investment advice</strong> and not a recommendation of any security. Company placements are indicative of business focus and role within the ecosystem and not an exhaustive list. Tickers are given for identification only. and US listings where one exists, home-market or ADR lines otherwise (e.g. <strong>IFNNY</strong> for Infineon, <strong>SSNLF/005930.KS</strong> for Samsung).</p>
+<p class="prelim-banner">This is a summarized educational map of market structure, <strong>not investment advice</strong> and not a recommendation of any security. Company placements are indicative of business focus and role within the ecosystem, not an exhaustive list. Tickers are given for identification only &mdash; US listings where one exists, home-market or ADR lines otherwise (e.g. <strong>IFNNY</strong> for Infineon, <strong>SSNLF&nbsp;/&nbsp;005930.KS</strong> for Samsung).</p>
 
 <div class="controls" role="group" aria-label="Jump to branch">
 <span class="label">Jump to</span>
@@ -97,13 +137,67 @@ footer code { color:var(--grey-2); }
 <a class="branch-chip" style="--c:var(--discrete)" href="#discrete">Discrete</a>
 </div>
 
+<!-- =================== FIGURE: SEGMENT MAP =================== -->
+<section id="map">
+<div class="figure-block">
+<p class="fig-label">Figure 1. The AI semiconductor taxonomy &mdash; segments and where they map on this page</p>
+<p class="fig-sub">Each branch below links to its section. Value badges show each domain's share of a rack's semiconductor <em>content value</em>, per the SIA/Deloitte report.</p>
+
+<div class="taxo-root">
+<div class="t">Semiconductors</div>
+<div class="d">Power AI data centers through compute, memory, storage, connectivity</div>
+</div>
+<div class="taxo-stem"></div>
+
+<div class="taxo-branches">
+<a class="taxo-branch" style="--bc:var(--digital)" href="#digital">
+<p class="bh">Digital · Logic</p>
+<p class="bd">Computes, controls, and moves binary data.</p>
+<span class="taxo-badge">Logic ≈ 65% of semi value</span>
+<div class="taxo-node">Serial Processors <span>· CPUs</span></div>
+<div class="taxo-node">Parallel Accelerators <span>· GPU / ASIC / FPGA</span></div>
+<div class="taxo-node">Networking <span>· under Logic, Note 3</span></div>
+</a>
+
+<a class="taxo-branch" style="--bc:var(--memory)" href="#memory">
+<p class="bh">Digital · Memory</p>
+<p class="bd">Stores, retrieves, and feeds data to compute.</p>
+<span class="taxo-badge">Memory &gt; 20% of semi value</span>
+<div class="taxo-node">HBM <span>· AI-critical</span></div>
+<div class="taxo-node">DRAM <span>· system memory</span></div>
+<div class="taxo-node">NAND <span>· bulk storage</span></div>
+<div class="taxo-node">SRAM <span>· on-chip cache</span></div>
+</a>
+
+<a class="taxo-branch" style="--bc:var(--analog)" href="#analog">
+<p class="bh">Analog</p>
+<p class="bd">Regulates power, manages heat, converts signals.</p>
+<span class="taxo-badge">Analog + Discrete ≈ 10&ndash;15%</span>
+<div class="taxo-node">Power <span>· PMICs / voltage regulators</span></div>
+<div class="taxo-node">Signal &amp; Interface <span>· ADC/DAC · clocks</span></div>
+</a>
+
+<a class="taxo-branch" style="--bc:var(--discrete)" href="#discrete">
+<p class="bh">Discrete Devices</p>
+<p class="bd">Standalone parts, each doing one job.</p>
+<span class="taxo-badge">shares the long-tail ~10&ndash;15%</span>
+<div class="taxo-node">Optoelectronics <span>· photonics</span></div>
+<div class="taxo-node">Power Transistors <span>· GaN / SiC</span></div>
+<div class="taxo-node">Sensors &amp; Transducers <span>· monitoring</span></div>
+</a>
+</div>
+
+<p class="fig-cap">Structure adapted from <a href="https://www.semiconductors.org/wp-content/uploads/2026/06/SIA-AI-Data-Center-Report_June-2026.pdf" target="_blank" rel="noopener">SIA &amp; Deloitte (June 2026), Figure&nbsp;3</a>. Content-value shares from the report's semiconductor content value analysis (Figure&nbsp;16 and accompanying text): logic ≈ 65%, memory &amp; storage &gt; 20%, with analog, discrete, and passives making up the remaining long tail. Shares are by semiconductor content value in a leading AI server rack and are indicative.</p>
+</div>
+</section>
+
 <!-- =================== DIGITAL =================== -->
 <section id="digital" style="--bc:var(--digital)">
 <p class="branch-head" style="--bc:var(--digital)">Digital · Logic</p>
-<p class="branch-sub">Chips that compute, control, and move binary data. In this branch the AI dollar is largest and growth is steepest &mdash; it contains the accelerators that do the training and inference, the host processors that orchestrate them, and (per the report's Note&nbsp;3) the networking silicon that ties racks together.</p>
+<p class="branch-sub">Chips that compute, control, and move binary data. In this branch the AI dollar is largest and growth is steepest &mdash; it contains the accelerators that do the training and inference, the host processors that orchestrate them, and (per the report's Note&nbsp;3) the networking silicon that ties racks together. Logic accounts for roughly 65% of a rack's semiconductor content value.</p>
 
 <h2>Parallel accelerators <span class="node-tag">GPUs · AI accelerators · ASICs · FPGAs</span></h2>
-<p class="narrative">The engine room of the buildout: chips that run thousands of operations at once for training and inference. The defining contest is <strong>merchant GPU vs. custom ASIC</strong> &mdash; Nvidia's general-purpose platform against hyperscaler-specific silicon designed by Broadcom and Marvell.</p>
+<p class="narrative">The engine room of the buildout: chips that run thousands of operations at once for training and inference. The report puts the AI Accelerator at more than <strong>70% of semiconductor content by value</strong> in a server rack &mdash; the single most valuable component. The defining contest is <strong>merchant GPU vs. custom ASIC</strong> &mdash; Nvidia's general-purpose platform against hyperscaler-specific silicon designed by Broadcom and Marvell.</p>
 <div class="table-scroll"><table>
 <thead><tr><th>Ticker</th><th>Company</th><th>Position in node</th><th>What it wins on</th></tr></thead>
 <tbody>
@@ -117,7 +211,7 @@ footer code { color:var(--grey-2); }
 <p class="driver"><b>Demand driver</b> &nbsp;AI training and inference compute &mdash; hyperscaler capex and model scale. This is the single line item pulling the whole chain; every other node on this page exists to feed, power, connect, or cool an accelerator.</p>
 
 <h2>Serial processors <span class="node-tag">CPUs · host / orchestration</span></h2>
-<p class="narrative">General-purpose chips that execute sequentially and <strong>orchestrate</strong> the accelerators &mdash; every GPU tray still needs a host CPU to schedule work and manage I/O. Smaller and slower-growing than the accelerator node, but structurally attached to it: accelerator units sold pull CPU attach with them.</p>
+<p class="narrative">General-purpose chips that execute sequentially and <strong>orchestrate</strong> the accelerators &mdash; every GPU tray still needs a host CPU to schedule work and manage I/O. The report attributes about <strong>8% of rack value</strong> to CPUs: smaller and slower-growing than the accelerator node, but structurally attached to it, since accelerator units sold pull CPU attach with them.</p>
 <div class="table-scroll"><table>
 <thead><tr><th>Ticker</th><th>Company</th><th>Position in node</th><th>What it wins on</th></tr></thead>
 <tbody>
@@ -147,10 +241,10 @@ footer code { color:var(--grey-2); }
 <!-- =================== MEMORY =================== -->
 <section id="memory" style="--bc:var(--memory)">
 <p class="branch-head" style="--bc:var(--memory)">Digital · Memory / Storage</p>
-<p class="branch-sub">Stores, retrieves, and feeds data to compute. The AI-critical distinction sits inside this branch: <strong>HBM</strong> (fast memory packaged beside the GPU) is the true bottleneck and the pricing power; <strong>NAND</strong> is bulk storage for the datasets &mdash; related, but a different rung with different economics.</p>
+<p class="branch-sub">Stores, retrieves, and feeds data to compute &mdash; more than 20% of a rack's semiconductor content value. The AI-critical distinction sits inside this branch: <strong>HBM</strong> (fast memory packaged beside the GPU) is the true bottleneck and the pricing power; <strong>NAND</strong> is bulk storage for the datasets &mdash; related, but a different rung with different economics.</p>
 
 <h2>Memory makers <span class="node-tag">HBM · DRAM · NAND · SRAM</span></h2>
-<p class="narrative">A near-consolidated field. The scarce, margin-rich product is <strong>HBM</strong> &mdash; capacity has been effectively sold out, and each new GPU generation stacks more of it. That scarcity is why memory has swung from commodity to kingmaker in the AI cycle.</p>
+<p class="narrative">A near-consolidated field. The scarce, margin-rich product is <strong>HBM</strong> &mdash; the report notes each accelerator co-packages 6&ndash;12 HBM stacks, and capacity has been effectively sold out. Each new GPU generation stacks more of it, which is why memory has swung from commodity to kingmaker in the AI cycle.</p>
 <div class="table-scroll"><table>
 <thead><tr><th>Ticker</th><th>Company</th><th>Position in node</th><th>What it wins on</th></tr></thead>
 <tbody>
@@ -166,10 +260,10 @@ footer code { color:var(--grey-2); }
 <!-- =================== ANALOG =================== -->
 <section id="analog" style="--bc:var(--analog)">
 <p class="branch-head" style="--bc:var(--analog)">Analog</p>
-<p class="branch-sub">Chips that regulate power, manage heat, and convert real-world signals for the digital infrastructure. Lower unit prices than accelerators, but high attach counts &mdash; a rack needs many of these, and as power density climbs, the power sub-node has become a genuine AI story rather than a sleepy analog line.</p>
+<p class="branch-sub">Chips that regulate power, manage heat, and convert real-world signals for the digital infrastructure. Lower unit prices than accelerators, but high attach counts &mdash; a single compute board can host 50&ndash;100+ voltage-regulator modules per the report &mdash; and as power density climbs, the power sub-node has become a genuine AI story rather than a sleepy analog line.</p>
 
 <h2>Power management <span class="node-tag">PMICs · voltage regulators</span></h2>
-<p class="narrative">Converts and delivers clean, high-current power to the GPU at the <strong>point of load</strong>. As accelerators draw more current at lower voltages, the precision and density of this delivery becomes a gating constraint &mdash; and the content per GPU rises with it.</p>
+<p class="narrative">Converts and delivers clean, high-current power to the GPU at the <strong>point of load</strong>. As accelerators draw more current at lower voltages (the report cites rails often below 1V), the precision and density of this delivery becomes a gating constraint &mdash; and the content per GPU rises with it.</p>
 <div class="table-scroll"><table>
 <thead><tr><th>Ticker</th><th>Company</th><th>Position in node</th><th>What it wins on</th></tr></thead>
 <tbody>
@@ -201,7 +295,7 @@ footer code { color:var(--grey-2); }
 <p class="branch-sub">Standalone components that each perform one function. Two sub-nodes carry real AI weight: <strong>optoelectronics</strong>, where the photonics interconnect story lives, and <strong>power transistors</strong>, where the shift to high-voltage rack power is playing out. Sensors round out the branch as the infrastructure's monitoring layer.</p>
 
 <h2>Optoelectronics <span class="node-tag">photonics · optical interconnect</span></h2>
-<p class="narrative">Devices that convert electrical signals to light and back &mdash; the substrate of <strong>optical interconnect</strong>. As copper hits its reach-and-power limits between racks, optics (and co-packaged optics) become structural, not optional. Nvidia has committed on the order of <strong>$4B</strong> to secure this supply, a signal of how load-bearing the node has become.</p>
+<p class="narrative">Devices that convert electrical signals to light and back &mdash; the substrate of <strong>optical interconnect</strong>. As copper hits its reach-and-power limits between racks, optics (and co-packaged optics) become structural, not optional; the report flags CPO as an emerging breakthrough for scale-up fabrics. Nvidia has committed on the order of <strong>$4B</strong> to secure this supply, a signal of how load-bearing the node has become.</p>
 <div class="table-scroll"><table>
 <thead><tr><th>Ticker</th><th>Company</th><th>Position in node</th><th>What it wins on</th></tr></thead>
 <tbody>
@@ -214,7 +308,7 @@ footer code { color:var(--grey-2); }
 <p class="driver"><b>Demand driver</b> &nbsp;Interconnect bandwidth and reach at data-center scale &mdash; the point at which electrons through copper become too lossy or power-hungry, and light takes over. Rising cluster size pulls optics content up faster than GPU units.</p>
 
 <h2>Power transistors <span class="node-tag">GaN · SiC · discrete power</span></h2>
-<p class="narrative">Single-function devices that switch and convert high power efficiently. The catalyst here is the move to <strong>800V HVDC</strong> rack architectures &mdash; wide-bandgap materials (GaN, SiC) that carry AI-scale power with far less copper and loss than legacy silicon.</p>
+<p class="narrative">Single-function devices that switch and convert high power efficiently. The catalyst here is the move to <strong>800V HVDC</strong> rack architectures &mdash; the report notes racks are heading toward 1&nbsp;MW versus the 100&ndash;120&nbsp;kW of today's most powerful racks &mdash; using wide-bandgap materials (GaN, SiC) that carry AI-scale power with far less copper and loss than legacy silicon.</p>
 <div class="table-scroll"><table>
 <thead><tr><th>Ticker</th><th>Company</th><th>Position in node</th><th>What it wins on</th></tr></thead>
 <tbody>
@@ -227,7 +321,7 @@ footer code { color:var(--grey-2); }
 <p class="driver"><b>Demand driver</b> &nbsp;The 800V power transition and total rack wattage &mdash; higher voltage cuts copper and loss, and wide-bandgap devices are what make it work. Note the cross-current: as an emerging theme, the near-term 800V TAM is debated even as the long-run direction is clear.</p>
 
 <h2>Sensors &amp; transducers <span class="node-tag">monitoring · current sensing · thermal</span></h2>
-<p class="narrative">Devices that detect and convert physical signals into data &mdash; the <strong>monitoring layer</strong> of the data center. Less directly tied to AI compute than the other discrete nodes, but rising with the buildout as denser, hotter, higher-power racks need more telemetry to run safely.</p>
+<p class="narrative">Devices that detect and convert physical signals into data &mdash; the <strong>monitoring layer</strong> of the data center. Less directly tied to AI compute than the other discrete nodes, but rising with the buildout as denser, hotter, higher-power racks (and the liquid-cooled CDU trays in the report) need more telemetry to run safely.</p>
 <div class="table-scroll"><table>
 <thead><tr><th>Ticker</th><th>Company</th><th>Position in node</th><th>What it wins on</th></tr></thead>
 <tbody>
@@ -243,9 +337,9 @@ footer code { color:var(--grey-2); }
 <section id="synthesis" style="--bc:var(--lavender)">
 <p class="branch-head" style="--bc:var(--lavender)">The dollar's path through the stack</p>
 <div class="stat-row">
-<div class="stat"><div class="big">Compute</div><div class="lab">Deepest pool · steepest growth</div><div class="fine">Accelerators + memory absorb most of the AI capex per rack</div></div>
-<div class="stat"><div class="big">Connect</div><div class="lab">Compounding faster than units</div><div class="fine">Networking + optics content rises as clusters scale up and out</div></div>
-<div class="stat"><div class="big">Power</div><div class="lab">Emerging, gated by density</div><div class="fine">Power mgmt + wide-bandgap discretes ride the 800V transition</div></div>
+<div class="stat"><div class="big">~95%</div><div class="lab">Of rack content value is semiconductors</div><div class="fine">A leading rack holds 4,500+ chips / ~20,000 dies (SIA/Deloitte)</div></div>
+<div class="stat"><div class="big">&gt;70%</div><div class="lab">Semi value in the AI accelerator</div><div class="fine">Logic overall ≈ 65%; memory &amp; storage &gt; 20% of semi value</div></div>
+<div class="stat"><div class="big">$2.8T</div><div class="lab">Semi spend, 2023&ndash;2030</div><div class="fine">Of ~$4T total AI data-center investment (SIA/Deloitte)</div></div>
 </div>
 <div class="commentary"><h4>How to read the map</h4>
 <p>Follow one dollar of AI-infrastructure spend and it traces the taxonomy in order: it enters through <strong>discrete power transistors</strong> converting grid power, is refined by <strong>analog power management</strong> at the board, spent mostly on <strong>digital accelerators and HBM memory</strong> doing the work, and routed back out through <strong>networking and optics</strong> to the next rack &mdash; with <strong>signal, timing, and sensors</strong> keeping the whole thing coherent. The value concentrates heavily at the compute and memory nodes; the surrounding nodes are smaller per unit but attach in high multiples and, for networking and optics, grow <em>faster</em> than GPU count as clusters get larger.</p>
@@ -253,7 +347,7 @@ footer code { color:var(--grey-2); }
 </div>
 </section>
 
-<footer>A company-level companion to the AI-chip taxonomy in Figure&nbsp;3. Node structure follows the report's Digital / Analog / Discrete classification, including its Note&nbsp;3 treatment of networking under Logic. Company placements reflect business focus and are indicative, not exhaustive; a firm may lead in one node and participate in several. Tickers identify securities for reference only. <code>Not investment advice</code> &mdash; this page illustrates market structure from public information and should not be used as the basis for any transaction.</footer>
+<footer>A company-level companion to the AI-chip taxonomy in Figure&nbsp;3 of <a href="https://www.semiconductors.org/wp-content/uploads/2026/06/SIA-AI-Data-Center-Report_June-2026.pdf" target="_blank" rel="noopener">SIA &amp; Deloitte, <em>Powering AI: The Semiconductor Ecosystem at the Foundation of Data Centers</em> (June 2026)</a> &mdash; the primary source for the taxonomy structure, rack economics, and the figures cited above. Node structure follows the report's Digital / Analog / Discrete classification, including its Note&nbsp;3 treatment of networking under Logic. Company placements reflect business focus and are indicative, not exhaustive; a firm may lead in one node and participate in several. Tickers identify securities for reference only. <code>Not investment advice</code> &mdash; this page illustrates market structure from public information and should not be used as the basis for any transaction.</footer>
 </main>
 </body>
 </html>
