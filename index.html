@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Semiconductor & AI Infrastructure Ecosystem Map| Aperture Insights</title>
-<meta name="description" content="A company-level map of the AI semiconductor taxonomy with the top 2-5 public companies detailed within each node (logic, memory, signal, power, discrete) to understand the supply chain. The key market drivers that determine demand are included along with an explanation of how each node fits into the AI infrastructure and data center ecosystems.">
+<title>Semiconductor &amp; AI Infrastructure Ecosystem Map | Aperture Insights</title>
+<meta name="description" content="A company-level map of the AI semiconductor taxonomy with the top public companies in each node (logic, memory, signal, power, discrete), each shown with headquarters, shares outstanding, approximate market cap, investor-relations and most-recent-filing links, plus a market-cap bubble chart by sector.">
 <style>
 :root {
 --paper:#090d1a; --navy:#01032d; --panel:#11162b; --lavender:#ccc2f6;
@@ -41,8 +41,6 @@ text-decoration:none; display:inline-flex; align-items:center; gap:6px; }
 .branch-chip::before { content:""; width:9px; height:9px; border-radius:50%; background:var(--c); }
 .branch-chip:hover { border-color:var(--c); color:var(--grey-1); }
 section { margin-top:12px; scroll-margin-top:72px; }
-
-/* --- Figure: taxonomy segment map --- */
 .figure-block { background:var(--panel); border:1px solid var(--rule); border-radius:10px;
 padding:20px 20px 16px; margin-top:22px; }
 .figure-block .fig-label { font-family:"Helvetica Neue",Arial,sans-serif; font-size:13px; color:var(--grey-1);
@@ -73,7 +71,7 @@ background:rgba(255,255,255,.02); border:1px solid var(--rule); margin-top:5px; 
 margin:16px 0 0; line-height:1.6; padding-top:12px; border-top:1px solid var(--rule); }
 .fig-cap a { color:var(--lavender); text-decoration:none; border-bottom:1px solid var(--rule); }
 .fig-cap a:hover { border-color:var(--lavender); }
-
+.fig-cap code { color:var(--grey-2); }
 .branch-head { font-family:"Helvetica Neue",Arial,sans-serif; font-size:12px; letter-spacing:.14em;
 text-transform:uppercase; margin:48px 0 0; padding-top:28px; border-top:1px solid var(--rule);
 color:var(--bc); font-weight:600; display:flex; align-items:center; gap:9px; }
@@ -99,6 +97,16 @@ td.tick { font-weight:600; color:var(--grey-1); border-left:3px solid var(--bc);
 td.co { color:var(--grey-1); font-weight:600; white-space:nowrap; }
 td.co a { color:inherit; text-decoration:none; border-bottom:1px solid var(--rule); }
 td.co a:hover { border-color:var(--lavender); }
+
+/* --- added: financial columns --- */
+th.num, td.num { text-align:right; }
+td.num { white-space:nowrap; font-variant-numeric:tabular-nums; color:var(--grey-1); }
+td.hq { white-space:nowrap; color:var(--grey-2); }
+td.file a { color:var(--lavender); text-decoration:none; border-bottom:1px solid var(--rule); white-space:nowrap; font-size:12px; }
+td.file a:hover { border-color:var(--lavender); }
+.bubble-wrap { overflow-x:auto; margin-top:4px; }
+.bubble-wrap svg { width:100%; min-width:760px; height:auto; display:block; }
+
 .commentary { font-family:"Helvetica Neue",Arial,sans-serif; margin:20px 0 0; padding:16px 18px; max-width:84ch;
 background:var(--panel); border-left:3px solid var(--lavender); border-radius:0 8px 8px 0; }
 .commentary h4 { font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--lavender); margin:0 0 10px; font-weight:600; }
@@ -120,16 +128,16 @@ footer a:hover { border-color:var(--lavender); }
 </head>
 <body>
 <main>
-<p class="eyebrow">AI Infrastructure &amp; Data Center Ecosystem · Market Structure</p>
+<p class="eyebrow">AI Infrastructure &amp; Data Center Ecosystem &#183; Market Structure</p>
 <h1>The AI Semiconductor Taxonomy: Overview</h1>
-<p class="byline"><a href="https://www.otnnamadim.com">Aperture Insights</a> · Published on August 14, 2026</p>
-<p class="source-note">Segment taxonomy adapted from <a href="https://www.semiconductors.org/wp-content/uploads/2026/06/SIA-AI-Data-Center-Report_June-2026.pdf" target="_blank" rel="noopener">SIA &amp; Deloitte, <em>Powering AI: The Semiconductor Ecosystem at the Foundation of Data Centers</em> (June 2026)</a> — see the full report for the detailed teardown, figures, and methodology. Company mapping and demand-driver commentary are Aperture Insights' own.</p>
+<p class="byline"><a href="https://www.otnnamadim.com">Aperture Insights</a> &#183; Published on August 14, 2026</p>
+<p class="source-note">Segment taxonomy adapted from <a href="https://www.semiconductors.org/wp-content/uploads/2026/06/SIA-AI-Data-Center-Report_June-2026.pdf" target="_blank" rel="noopener">SIA &amp; Deloitte, <em>Powering AI: The Semiconductor Ecosystem at the Foundation of Data Centers</em> (June 2026)</a> &mdash; see the full report for the detailed teardown, figures, and methodology. Company mapping, financial fields, and demand-driver commentary are Aperture Insights' own.</p>
 
-<p class="intro">An AI server rack is not one chip but a stack of specialized ones, each drawn from a different branch of the semiconductor family tree. This page takes the taxonomy in <strong>Figure&nbsp;3</strong> of the SIA/Deloitte report &mdash; the Digital / Analog / Discrete structure of AI silicon &mdash; and, for each node, names the <strong>2&ndash;5 public companies that lead it</strong>, the <strong>market driver</strong> that sets demand for that block, and <strong>how it fits the ecosystem</strong> around it. The organizing spine is the diagram's own, not a flat four-bucket list: logic and memory sit under Digital; signal and power under Analog; optoelectronics, power transistors, and sensors under Discrete.</p>
+<p class="intro">An AI server rack is not one chip but a stack of specialized ones, each drawn from a different branch of the semiconductor family tree. This page takes the taxonomy in <strong>Figure&nbsp;3</strong> of the SIA/Deloitte report &mdash; the Digital / Analog / Discrete structure of AI silicon &mdash; and, for each node, names the <strong>2&ndash;5 public companies that lead it</strong>, the <strong>market driver</strong> that sets demand for that block, and <strong>how it fits the ecosystem</strong> around it. Each company now also carries its <strong>headquarters, shares outstanding, an approximate market cap</strong> (share price &times; shares, as of the 8/14/2026 close), and links to its <strong>investor-relations page</strong> (the company name) and <strong>most recent filing</strong>. The organizing spine is the diagram's own, not a flat four-bucket list: logic and memory sit under Digital; signal and power under Analog; optoelectronics, power transistors, and sensors under Discrete.</p>
 
-<p class="intro" style="margin-top:14px">Read it as a map of <strong>where the AI-infrastructure dollar lands</strong> as it moves from the grid, through power conversion, into compute and memory, and back out across the network. A company can occupy more than one node &mdash; Nvidia is compute <em>and</em> networking; Broadcom is custom compute <em>and</em> networking <em>and</em> optics; Infineon spans analog power <em>and</em> discrete transistors &mdash; so these are functional positions, not clean corporate boxes.</p>
+<p class="intro" style="margin-top:14px">Read it as a map of <strong>where the AI-infrastructure dollar lands</strong> as it moves from the grid, through power conversion, into compute and memory, and back out across the network. A company can occupy more than one node &mdash; Nvidia is compute <em>and</em> networking; Broadcom is custom compute <em>and</em> networking <em>and</em> optics; Infineon spans analog power <em>and</em> discrete transistors &mdash; so these are functional positions, not clean corporate boxes. <strong>Figure&nbsp;2</strong> below compares every name by market cap within its sector.</p>
 
-<p class="prelim-banner">This is a summarized educational map of market structure, <strong>not investment advice</strong> and not a recommendation of any security. Company placements are indicative of business focus and role within the ecosystem, not an exhaustive list. Tickers are given for identification only &mdash; US listings where one exists, home-market or ADR lines otherwise (e.g. <strong>IFNNY</strong> for Infineon, <strong>SSNLF&nbsp;/&nbsp;005930.KS</strong> for Samsung).</p>
+<p class="prelim-banner">This is a summarized educational map of market structure, <strong>not investment advice</strong> and not a recommendation of any security. Company placements are indicative of business focus, not exhaustive. Market caps are <strong>approximate and self-computed</strong> (shares &times; 8/14/2026 close); <strong>SK&nbsp;Hynix</strong> uses ADR-equivalent shares (10 ADRs = 1 ordinary share) and <strong>Samsung</strong> is USD-converted at &#8361;1,417.53/$; a few inputs (e.g. Intel) still warrant reconfirmation. Tickers identify securities for reference only &mdash; US listings where one exists, home-market or ADR lines otherwise (e.g. <strong>IFNNY</strong> for Infineon, <strong>005930.KS</strong> for Samsung).</p>
 
 <div class="controls" role="group" aria-label="Jump to branch">
 <span class="label">Jump to</span>
@@ -137,210 +145,278 @@ footer a:hover { border-color:var(--lavender); }
 <a class="branch-chip" style="--c:var(--memory)" href="#memory">Memory / Storage</a>
 <a class="branch-chip" style="--c:var(--analog)" href="#analog">Analog</a>
 <a class="branch-chip" style="--c:var(--discrete)" href="#discrete">Discrete</a>
+<a class="branch-chip" style="--c:var(--lavender)" href="#mktcap">Market-cap chart</a>
 </div>
-
-<!-- =================== FIGURE: SEGMENT MAP =================== -->
 <section id="map">
 <div class="figure-block">
 <p class="fig-label">Figure 1. The AI semiconductor taxonomy &mdash; segments and where they map on this page</p>
 <p class="fig-sub">Each branch below links to its section. Value badges show each domain's share of a rack's semiconductor <em>content value</em>, per the SIA/Deloitte report.</p>
-
-<div class="taxo-root">
-<div class="t">Semiconductors</div>
-<div class="d">Power AI data centers through compute, memory, storage, connectivity</div>
-</div>
+<div class="taxo-root"><div class="t">Semiconductors</div><div class="d">Power AI data centers through compute, memory, storage, connectivity</div></div>
 <div class="taxo-stem"></div>
-
 <div class="taxo-branches">
-<a class="taxo-branch" style="--bc:var(--digital)" href="#digital">
-<p class="bh">Digital · Logic</p>
-<p class="bd">Computes, controls, and moves binary data.</p>
-<span class="taxo-badge">Logic ≈ 65% of semi value</span>
-<div class="taxo-node">Serial Processors <span>· CPUs</span></div>
-<div class="taxo-node">Parallel Accelerators <span>· GPU / ASIC / FPGA</span></div>
-<div class="taxo-node">Networking <span>· under Logic, Note 3</span></div>
-</a>
-
-<a class="taxo-branch" style="--bc:var(--memory)" href="#memory">
-<p class="bh">Digital · Memory</p>
-<p class="bd">Stores, retrieves, and feeds data to compute.</p>
-<span class="taxo-badge">Memory &gt; 20% of semi value</span>
-<div class="taxo-node">HBM <span>· AI-critical</span></div>
-<div class="taxo-node">DRAM <span>· system memory</span></div>
-<div class="taxo-node">NAND <span>· bulk storage</span></div>
-<div class="taxo-node">SRAM <span>· on-chip cache</span></div>
-</a>
-
-<a class="taxo-branch" style="--bc:var(--analog)" href="#analog">
-<p class="bh">Analog</p>
-<p class="bd">Regulates power, manages heat, converts signals.</p>
-<span class="taxo-badge">Analog + Discrete ≈ 10&ndash;15%</span>
-<div class="taxo-node">Power <span>· PMICs / voltage regulators</span></div>
-<div class="taxo-node">Signal &amp; Interface <span>· ADC/DAC · clocks</span></div>
-</a>
-
-<a class="taxo-branch" style="--bc:var(--discrete)" href="#discrete">
-<p class="bh">Discrete Devices</p>
-<p class="bd">Standalone parts, each doing one job.</p>
-<span class="taxo-badge">shares the long-tail ~10&ndash;15%</span>
-<div class="taxo-node">Optoelectronics <span>· photonics</span></div>
-<div class="taxo-node">Power Transistors <span>· GaN / SiC</span></div>
-<div class="taxo-node">Sensors &amp; Transducers <span>· monitoring</span></div>
-</a>
+<a class="taxo-branch" style="--bc:var(--digital)" href="#digital"><p class="bh">Digital &#183; Logic</p><p class="bd">Computes, controls, and moves binary data.</p><span class="taxo-badge">Logic &#8776; 65% of semi value</span><div class="taxo-node">Serial Processors <span>&#183; CPUs</span></div><div class="taxo-node">Parallel Accelerators <span>&#183; GPU / ASIC / FPGA</span></div><div class="taxo-node">Networking <span>&#183; under Logic, Note 3</span></div></a>
+<a class="taxo-branch" style="--bc:var(--memory)" href="#memory"><p class="bh">Digital &#183; Memory</p><p class="bd">Stores, retrieves, and feeds data to compute.</p><span class="taxo-badge">Memory &gt; 20% of semi value</span><div class="taxo-node">HBM <span>&#183; AI-critical</span></div><div class="taxo-node">DRAM <span>&#183; system memory</span></div><div class="taxo-node">NAND <span>&#183; bulk storage</span></div><div class="taxo-node">SRAM <span>&#183; on-chip cache</span></div></a>
+<a class="taxo-branch" style="--bc:var(--analog)" href="#analog"><p class="bh">Analog</p><p class="bd">Regulates power, manages heat, converts signals.</p><span class="taxo-badge">Analog + Discrete &#8776; 10&ndash;15%</span><div class="taxo-node">Power <span>&#183; PMICs / voltage regulators</span></div><div class="taxo-node">Signal &amp; Interface <span>&#183; ADC/DAC &#183; clocks</span></div></a>
+<a class="taxo-branch" style="--bc:var(--discrete)" href="#discrete"><p class="bh">Discrete Devices</p><p class="bd">Standalone parts, each doing one job.</p><span class="taxo-badge">shares the long-tail ~10&ndash;15%</span><div class="taxo-node">Optoelectronics <span>&#183; photonics</span></div><div class="taxo-node">Power Transistors <span>&#183; GaN / SiC</span></div><div class="taxo-node">Sensors &amp; Transducers <span>&#183; monitoring</span></div></a>
 </div>
-
-<p class="fig-cap">Structure adapted from <a href="https://www.semiconductors.org/wp-content/uploads/2026/06/SIA-AI-Data-Center-Report_June-2026.pdf" target="_blank" rel="noopener">SIA &amp; Deloitte (June 2026), Figure&nbsp;3</a>. Content-value shares from the report's semiconductor content value analysis (Figure&nbsp;16 and accompanying text): logic ≈ 65%, memory &amp; storage &gt; 20%, with analog, discrete, and passives making up the remaining long tail. Shares are by semiconductor content value in a leading AI server rack and are indicative.</p>
+<p class="fig-cap">Structure adapted from <a href="https://www.semiconductors.org/wp-content/uploads/2026/06/SIA-AI-Data-Center-Report_June-2026.pdf" target="_blank" rel="noopener">SIA &amp; Deloitte (June 2026), Figure&nbsp;3</a>. Content-value shares from the report's semiconductor content value analysis: logic &#8776; 65%, memory &amp; storage &gt; 20%, with analog, discrete, and passives making up the remaining long tail. Shares are by semiconductor content value in a leading AI server rack and are indicative.</p>
 </div>
 </section>
-
-<!-- =================== DIGITAL =================== -->
 <section id="digital" style="--bc:var(--digital)">
 <p class="branch-head" style="--bc:var(--digital)">Digital · Logic</p>
 <p class="branch-sub">Chips that compute, control, and move binary data. In this branch the AI dollar is largest and growth is steepest &mdash; it contains the accelerators that do the training and inference, the host processors that orchestrate them, and (per the report's Note&nbsp;3) the networking silicon that ties racks together. Logic accounts for roughly 65% of a rack's semiconductor content value.</p>
-
 <h2>Parallel accelerators <span class="node-tag">GPUs · AI accelerators · ASICs · FPGAs</span></h2>
 <p class="narrative">The engine room of the buildout: chips that run thousands of operations at once for training and inference. The report puts the AI Accelerator at more than <strong>70% of semiconductor content by value</strong> in a server rack &mdash; the single most valuable component. The defining contest is <strong>merchant GPU vs. custom ASIC</strong> &mdash; Nvidia's general-purpose platform against hyperscaler-specific silicon designed by Broadcom and Marvell.</p>
 <div class="table-scroll"><table>
-<thead><tr><th>Ticker</th><th>Company</th><th>Position in node</th><th>What it wins on</th></tr></thead>
+<thead><tr><th>Ticker</th><th>Company</th><th>HQ</th><th class="num">Shares out.</th><th class="num">Approx. mkt cap</th><th>Filing</th><th>Position in node</th><th>What it wins on</th></tr></thead>
 <tbody>
-<tr><td class="tick">NVDA</td><td class="co"><a href="https://investor.nvidia.com/home/default.aspx" target="_blank" rel="noopener">Nvidia</a></td><td>Dominant merchant GPU (Blackwell, Rubin); the platform standard</td><td>CUDA software lock-in; full rack-scale systems, not just chips</td></tr>
-<tr><td class="tick">AVGO</td><td class="co"><a href="https://investors.broadcom.com/" target="_blank" rel="noopener">Broadcom</a></td><td>Custom AI ASICs (XPUs) for hyperscalers; the leading merchant-ASIC partner</td><td>Cheaper, power-tuned silicon for a customer's one workload at volume</td></tr>
-<tr><td class="tick">AMD</td><td class="co"><a href="https://ir.amd.com/" target="_blank" rel="noopener">AMD</a></td><td>Instinct MI-series &mdash; the credible #2 merchant accelerator</td><td>Memory capacity per chip; buyers wanting a second source to Nvidia</td></tr>
-<tr><td class="tick">MRVL</td><td class="co"><a href="https://investor.marvell.com/" target="_blank" rel="noopener">Marvell</a></td><td>Custom compute silicon (e.g. Amazon Trainium) plus the connecting IP</td><td>Custom-silicon design wins tied to its networking/optics content</td></tr>
-<tr><td class="tick">LSCC</td><td class="co"><a href="https://ir.latticesemi.com/investor-overview/" target="_blank" rel="noopener">Lattice</a></td><td>Small-FPGA leader; reconfigurable logic for control-plane and inference</td><td>Low-power programmability where fixed silicon is overkill</td></tr>
-</tbody>
-</table></div>
+<tr><td class="tick">NVDA</td><td class="co"><a href="https://investor.nvidia.com/home/default.aspx" target="_blank" rel="noopener">Nvidia</a></td><td class="hq">Santa Clara, CA</td><td class="num">24.22B</td><td class="num">$5.45T</td><td class="file"><a href="https://s201.q4cdn.com/141608511/files/doc_financials/2027/q1/927dc2d6-a76c-4006-9f34-8769b2c665fb.pdf" target="_blank" rel="noopener">View&nbsp;&#8599;</a></td><td>Dominant merchant GPU (Blackwell, Rubin); the platform standard</td><td>CUDA software lock-in; full rack-scale systems, not just chips</td></tr>
+<tr><td class="tick">AVGO</td><td class="co"><a href="https://investors.broadcom.com/" target="_blank" rel="noopener">Broadcom</a></td><td class="hq">Palo Alto, CA</td><td class="num">4.76B</td><td class="num">$1.87T</td><td class="file"><a href="https://www.sec.gov/ix?doc=/Archives/edgar/data/0001730168/000173016826000054/avgo-20260503.htm" target="_blank" rel="noopener">View&nbsp;&#8599;</a></td><td>Custom AI ASICs (XPUs) for hyperscalers; the leading merchant-ASIC partner</td><td>Cheaper, power-tuned silicon for a customer's one workload at volume</td></tr>
+<tr><td class="tick">AMD</td><td class="co"><a href="https://ir.amd.com/" target="_blank" rel="noopener">AMD</a></td><td class="hq">Santa Clara, CA</td><td class="num">1.63B</td><td class="num">$839.7B</td><td class="file"><a href="https://www.sec.gov/ix?doc=/Archives/edgar/data/0000002488/000000248826000123/amd-20260627.htm" target="_blank" rel="noopener">View&nbsp;&#8599;</a></td><td>Instinct MI-series &mdash; the credible #2 merchant accelerator</td><td>Memory capacity per chip; buyers wanting a second source to Nvidia</td></tr>
+<tr><td class="tick">MRVL</td><td class="co"><a href="https://investor.marvell.com/" target="_blank" rel="noopener">Marvell</a></td><td class="hq">Wilmington, DE</td><td class="num">874.8M</td><td class="num">$194.2B</td><td class="file"><a href="https://investor.marvell.com/sec-filings/all-sec-filings/content/0001835632-26-000019/mrvl-20260502.htm" target="_blank" rel="noopener">View&nbsp;&#8599;</a></td><td>Custom compute silicon (e.g. Amazon Trainium) plus the connecting IP</td><td>Custom-silicon design wins tied to its networking/optics content</td></tr>
+<tr><td class="tick">LSCC</td><td class="co"><a href="https://ir.latticesemi.com/" target="_blank" rel="noopener">Lattice</a></td><td class="hq">Hillsboro, OR</td><td class="num">142.0M</td><td class="num">$18.5B</td><td class="file"><a href="https://www.sec.gov/ix?doc=/Archives/edgar/data/0000855658/000143774926025657/lscc20260704_10q.htm" target="_blank" rel="noopener">View&nbsp;&#8599;</a></td><td>Small-FPGA leader; reconfigurable logic for control-plane and inference</td><td>Low-power programmability where fixed silicon is overkill</td></tr>
+</tbody></table></div>
 <p class="driver"><b>Demand driver</b> &nbsp;AI training and inference compute &mdash; hyperscaler capex and model scale. This is the single line item pulling the whole chain; every other node on this page exists to feed, power, connect, or cool an accelerator.</p>
-
 <h2>Serial processors <span class="node-tag">CPUs · host / orchestration</span></h2>
 <p class="narrative">General-purpose chips that execute sequentially and <strong>orchestrate</strong> the accelerators &mdash; every GPU tray still needs a host CPU to schedule work and manage I/O. The report attributes about <strong>8% of rack value</strong> to CPUs: smaller and slower-growing than the accelerator node, but structurally attached to it, since accelerator units sold pull CPU attach with them.</p>
 <div class="table-scroll"><table>
-<thead><tr><th>Ticker</th><th>Company</th><th>Position in node</th><th>What it wins on</th></tr></thead>
+<thead><tr><th>Ticker</th><th>Company</th><th>HQ</th><th class="num">Shares out.</th><th class="num">Approx. mkt cap</th><th>Filing</th><th>Position in node</th><th>What it wins on</th></tr></thead>
 <tbody>
-<tr><td class="tick">AMD</td><td class="co"><a href="https://ir.amd.com/" target="_blank" rel="noopener">Advanced Micro Devices</a></td><td>EPYC server CPUs; the share-gaining incumbent-challenger in data center</td><td>Core count and performance-per-watt; pairs with its own Instinct GPUs</td></tr>
-<tr><td class="tick">INTC</td><td class="co"><a href="https://www.intc.com" target="_blank" rel="noopener">Intel</a></td><td>Xeon &mdash; the installed-base incumbent defending share</td><td>Enterprise footprint, x86 compatibility, breadth of SKUs</td></tr>
-<tr><td class="tick">ARM</td><td class="co"><a href="https://investors.arm.com/investor-relations/" target="_blank" rel="noopener">Arm Holdings</a></td><td>IP licensor behind Nvidia's Grace/Vera and hyperscaler custom CPUs</td><td>Power-efficient architecture; royalty on nearly every custom core</td></tr>
-<tr><td class="tick">QCOM</td><td class="co"><a href="https://investor.qualcomm.com/overview/default.aspx" target="_blank" rel="noopener">Qualcomm</a></td><td>Client/edge CPU leader probing the data-center door</td><td>Efficiency heritage from mobile; edge-inference positioning</td></tr>
-</tbody>
-</table></div>
+<tr><td class="tick">AMD</td><td class="co"><a href="https://ir.amd.com/" target="_blank" rel="noopener">Advanced Micro Devices</a></td><td class="hq">Santa Clara, CA</td><td class="num">1.63B</td><td class="num">$839.7B</td><td class="file"><a href="https://www.sec.gov/ix?doc=/Archives/edgar/data/0000002488/000000248826000123/amd-20260627.htm" target="_blank" rel="noopener">View&nbsp;&#8599;</a></td><td>EPYC server CPUs; the share-gaining incumbent-challenger in data center</td><td>Core count and performance-per-watt; pairs with its own Instinct GPUs</td></tr>
+<tr><td class="tick">INTC</td><td class="co"><a href="https://www.intc.com/" target="_blank" rel="noopener">Intel</a></td><td class="hq">Santa Clara, CA</td><td class="num">4.99B</td><td class="num">$511.9B</td><td class="file"><a href="https://www.sec.gov/edgar/browse/?CIK=50863&owner=exclude" target="_blank" rel="noopener">View&nbsp;&#8599;</a></td><td>Xeon &mdash; the installed-base incumbent defending share</td><td>Enterprise footprint, x86 compatibility, breadth of SKUs</td></tr>
+<tr><td class="tick">ARM</td><td class="co"><a href="https://investors.arm.com/" target="_blank" rel="noopener">Arm Holdings</a></td><td class="hq">Cambridge, UK</td><td class="num">1.07B</td><td class="num">$298.4B</td><td class="file"><a href="https://investors.arm.com/node/8356/html" target="_blank" rel="noopener">View&nbsp;&#8599;</a></td><td>IP licensor behind Nvidia's Grace/Vera and hyperscaler custom CPUs</td><td>Power-efficient architecture; royalty on nearly every custom core</td></tr>
+<tr><td class="tick">QCOM</td><td class="co"><a href="https://investor.qualcomm.com/" target="_blank" rel="noopener">Qualcomm</a></td><td class="hq">San Diego, CA</td><td class="num">1.06B</td><td class="num">$175.2B</td><td class="file"><a href="https://d18rn0p25nwr6d.cloudfront.net/CIK-0000804328/7d3caf6c-fd0c-4f6e-a4d4-e459b2fdaded.pdf" target="_blank" rel="noopener">View&nbsp;&#8599;</a></td><td>Client/edge CPU leader probing the data-center door</td><td>Efficiency heritage from mobile; edge-inference positioning</td></tr>
+</tbody></table></div>
 <p class="driver"><b>Demand driver</b> &nbsp;Attach to accelerators plus general cloud/enterprise server refresh. Grows with the fleet, but as a supporting role &mdash; the value per rack is migrating toward the accelerator and away from the host.</p>
-
 <h2>Networking silicon <span class="node-tag">filed under Logic per Note 3</span></h2>
 <p class="narrative">The connective tissue: switch and interconnect chips that let thousands &mdash; soon millions &mdash; of accelerators behave as one machine. As clusters grow, this stops being plumbing and becomes the <strong>bottleneck</strong>, which is why it is one of the most contested nodes on the board.</p>
 <div class="table-scroll"><table>
-<thead><tr><th>Ticker</th><th>Company</th><th>Position in node</th><th>What it wins on</th></tr></thead>
+<thead><tr><th>Ticker</th><th>Company</th><th>HQ</th><th class="num">Shares out.</th><th class="num">Approx. mkt cap</th><th>Filing</th><th>Position in node</th><th>What it wins on</th></tr></thead>
 <tbody>
-<tr><td class="tick">AVGO</td><td class="co"><a href="https://investors.broadcom.com/" target="_blank" rel="noopener">Broadcom</a></td><td>Merchant switch-silicon leader (Tomahawk/Jericho); scale-out Ethernet</td><td>Open-standard Ethernet fabric; the default for non-Nvidia clusters</td></tr>
-<tr><td class="tick">NVDA</td><td class="co"><a href="https://investor.nvidia.com/home/default.aspx" target="_blank" rel="noopener">Nvidia</a></td><td>InfiniBand, Spectrum-X Ethernet, and NVLink scale-up (ex-Mellanox)</td><td>Tight GPU-to-fabric integration; NVLink as a captive scale-up moat</td></tr>
-<tr><td class="tick">ALAB</td><td class="co"><a href="https://ir.asteralabs.com/investor-relations/" target="_blank" rel="noopener">Astera Labs</a></td><td>Rack-scale connectivity &mdash; PCIe/CXL retimers, Scorpio fabric switches</td><td>Signal integrity inside the rack; a pure-play on GPU density</td></tr>
-<tr><td class="tick">MRVL</td><td class="co"><a href="https://investor.marvell.com/" target="_blank" rel="noopener">Marvell</a></td><td>Data-center interconnect, custom fabrics, and electro-optics content</td><td>Bundling custom compute with the links between the chips</td></tr>
-<tr><td class="tick">ANET</td><td class="co"><a href="https://investors.arista.com/Home/default.aspx" target="_blank" rel="noopener">Arista Networks</a></td><td>Switch <em>systems</em> (built on merchant silicon) for AI back-end networks</td><td>Software (EOS) and large-cluster operational track record</td></tr>
-</tbody>
-</table></div>
+<tr><td class="tick">AVGO</td><td class="co"><a href="https://investors.broadcom.com/" target="_blank" rel="noopener">Broadcom</a></td><td class="hq">Palo Alto, CA</td><td class="num">4.76B</td><td class="num">$1.87T</td><td class="file"><a href="https://www.sec.gov/ix?doc=/Archives/edgar/data/0001730168/000173016826000054/avgo-20260503.htm" target="_blank" rel="noopener">View&nbsp;&#8599;</a></td><td>Merchant switch-silicon leader (Tomahawk/Jericho); scale-out Ethernet</td><td>Open-standard Ethernet fabric; the default for non-Nvidia clusters</td></tr>
+<tr><td class="tick">NVDA</td><td class="co"><a href="https://investor.nvidia.com/home/default.aspx" target="_blank" rel="noopener">Nvidia</a></td><td class="hq">Santa Clara, CA</td><td class="num">24.22B</td><td class="num">$5.45T</td><td class="file"><a href="https://s201.q4cdn.com/141608511/files/doc_financials/2027/q1/927dc2d6-a76c-4006-9f34-8769b2c665fb.pdf" target="_blank" rel="noopener">View&nbsp;&#8599;</a></td><td>InfiniBand, Spectrum-X Ethernet, and NVLink scale-up (ex-Mellanox)</td><td>Tight GPU-to-fabric integration; NVLink as a captive scale-up moat</td></tr>
+<tr><td class="tick">ALAB</td><td class="co"><a href="https://ir.asteralabs.com/" target="_blank" rel="noopener">Astera Labs</a></td><td class="hq">San Jose, CA</td><td class="num">173.5M</td><td class="num">$55.8B</td><td class="file"><a href="https://www.sec.gov/ix?doc=/Archives/edgar/data/0001736297/000173629726000035/alab-20260630.htm" target="_blank" rel="noopener">View&nbsp;&#8599;</a></td><td>Rack-scale connectivity &mdash; PCIe/CXL retimers, Scorpio fabric switches</td><td>Signal integrity inside the rack; a pure-play on GPU density</td></tr>
+<tr><td class="tick">MRVL</td><td class="co"><a href="https://investor.marvell.com/" target="_blank" rel="noopener">Marvell</a></td><td class="hq">Wilmington, DE</td><td class="num">874.8M</td><td class="num">$194.2B</td><td class="file"><a href="https://investor.marvell.com/sec-filings/all-sec-filings/content/0001835632-26-000019/mrvl-20260502.htm" target="_blank" rel="noopener">View&nbsp;&#8599;</a></td><td>Data-center interconnect, custom fabrics, and electro-optics content</td><td>Bundling custom compute with the links between the chips</td></tr>
+<tr><td class="tick">ANET</td><td class="co"><a href="https://investors.arista.com/" target="_blank" rel="noopener">Arista Networks</a></td><td class="hq">Santa Clara, CA</td><td class="num">1.26B</td><td class="num">$250.8B</td><td class="file"><a href="https://www.sec.gov/edgar/browse/?CIK=1596532&owner=exclude" target="_blank" rel="noopener">View&nbsp;&#8599;</a></td><td>Switch <em>systems</em> (built on merchant silicon) for AI back-end networks</td><td>Software (EOS) and large-cluster operational track record</td></tr>
+</tbody></table></div>
 <p class="driver"><b>Demand driver</b> &nbsp;Cluster scale-up and scale-out &mdash; rising GPU counts and data rates per link. Networking content per accelerator grows as models get distributed across more chips, so this node compounds faster than raw GPU units alone.</p>
 </section>
 
-<!-- =================== MEMORY =================== -->
 <section id="memory" style="--bc:var(--memory)">
 <p class="branch-head" style="--bc:var(--memory)">Digital · Memory / Storage</p>
 <p class="branch-sub">Stores, retrieves, and feeds data to compute &mdash; more than 20% of a rack's semiconductor content value. The AI-critical distinction sits inside this branch: <strong>HBM</strong> (fast memory packaged beside the GPU) is the true bottleneck and the pricing power; <strong>NAND</strong> is bulk storage for the datasets &mdash; related, but a different rung with different economics.</p>
-
 <h2>Memory makers <span class="node-tag">HBM · DRAM · NAND · SRAM</span></h2>
 <p class="narrative">A near-consolidated field. The scarce, margin-rich product is <strong>HBM</strong> &mdash; the report notes each accelerator co-packages 6&ndash;12 HBM stacks, and capacity has been effectively sold out. Each new GPU generation stacks more of it, which is why memory has swung from commodity to kingmaker in the AI cycle.</p>
 <div class="table-scroll"><table>
-<thead><tr><th>Ticker</th><th>Company</th><th>Position in node</th><th>What it wins on</th></tr></thead>
+<thead><tr><th>Ticker</th><th>Company</th><th>HQ</th><th class="num">Shares out.</th><th class="num">Approx. mkt cap</th><th>Filing</th><th>Position in node</th><th>What it wins on</th></tr></thead>
 <tbody>
-<tr><td class="tick">000660.KS</td><td class="co"><a href="https://www.skhynix.com/ir/UI-FR-IR01" target="_blank" rel="noopener">SK Hynix</a></td><td>HBM share leader; lead qualified supplier into Nvidia</td><td>First-mover HBM yield and the Nvidia qualification lead</td></tr>
-<tr><td class="tick">MU</td><td class="co"><a href="https://investors.micron.com/overview/default.aspx" target="_blank" rel="noopener">Micron</a></td><td>HBM + DRAM ramping fast; the US-listed memory play</td><td>Power efficiency claims on HBM; domestic-supply positioning</td></tr>
-<tr><td class="tick">005930.KS</td><td class="co"><a href="https://www.samsung.com/global/ir/" target="_blank" rel="noopener">Samsung</a></td><td>Scale memory maker racing to close the HBM qualification gap</td><td>Manufacturing scale and vertical breadth (memory + foundry)</td></tr>
-<tr><td class="tick">SNDK</td><td class="co"><a href="https://investor.sandisk.com/" target="_blank" rel="noopener">SanDisk</a></td><td>NAND / flash storage (spun out of Western Digital, 2025)</td><td>Bulk data-lake storage for training corpora &mdash; the other rung</td></tr>
-</tbody>
-</table></div>
+<tr><td class="tick">SKHY</td><td class="co"><a href="https://www.skhynix.com/ir/UI-FR-IR01" target="_blank" rel="noopener">SK Hynix</a></td><td class="hq">Seoul, Korea</td><td class="num">7.29B</td><td class="num">$1.21T</td><td class="file"><a href="https://www.sec.gov/Archives/edgar/data/2120882/000119312526321989/d115239d6k.htm" target="_blank" rel="noopener">View&nbsp;&#8599;</a></td><td>HBM share leader; lead qualified supplier into Nvidia</td><td>First-mover HBM yield and the Nvidia qualification lead</td></tr>
+<tr><td class="tick">MU</td><td class="co"><a href="https://investors.micron.com/" target="_blank" rel="noopener">Micron</a></td><td class="hq">Boise, ID</td><td class="num">1.13B</td><td class="num">$1.10T</td><td class="file"><a href="https://www.sec.gov/ix?doc=/Archives/edgar/data/0000723125/000072312526000015/mu-20260528.htm" target="_blank" rel="noopener">View&nbsp;&#8599;</a></td><td>HBM + DRAM ramping fast; the US-listed memory play</td><td>Power efficiency claims on HBM; domestic-supply positioning</td></tr>
+<tr><td class="tick">005930.KS</td><td class="co"><a href="https://www.samsung.com/global/ir/" target="_blank" rel="noopener">Samsung</a></td><td class="hq">Suwon, Korea</td><td class="num">5.97B</td><td class="num">$1.16T</td><td class="file"><a href="https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2026_2Q_conference_eng.pdf" target="_blank" rel="noopener">View&nbsp;&#8599;</a></td><td>Scale memory maker racing to close the HBM qualification gap</td><td>Manufacturing scale and vertical breadth (memory + foundry)</td></tr>
+<tr><td class="tick">SNDK</td><td class="co"><a href="https://investor.sandisk.com/" target="_blank" rel="noopener">SanDisk</a></td><td class="hq">Milpitas, CA</td><td class="num">146.0M</td><td class="num">$239.6B</td><td class="file"><a href="https://www.sec.gov/Archives/edgar/data/2023554/000162828026053346/sndkq4-26ex991xpressrelease.htm" target="_blank" rel="noopener">View&nbsp;&#8599;</a></td><td>NAND / flash storage (spun out of Western Digital, 2025)</td><td>Bulk data-lake storage for training corpora &mdash; the other rung</td></tr>
+</tbody></table></div>
 <p class="driver"><b>Demand driver</b> &nbsp;HBM: bytes and bandwidth per accelerator &mdash; set directly by GPU roadmaps (more stacks, taller stacks each generation). NAND: the size of the datasets being retained and served. HBM is capacity-gated, so it behaves less like a commodity and more like a co-designed component of the GPU itself.</p>
 </section>
 
-<!-- =================== ANALOG =================== -->
 <section id="analog" style="--bc:var(--analog)">
 <p class="branch-head" style="--bc:var(--analog)">Analog</p>
 <p class="branch-sub">Chips that regulate power, manage heat, and convert real-world signals for the digital infrastructure. Lower unit prices than accelerators, but high attach counts &mdash; a single compute board can host 50&ndash;100+ voltage-regulator modules per the report &mdash; and as power density climbs, the power sub-node has become a genuine AI story rather than a sleepy analog line.</p>
-
 <h2>Power management <span class="node-tag">PMICs · voltage regulators</span></h2>
 <p class="narrative">Converts and delivers clean, high-current power to the GPU at the <strong>point of load</strong>. As accelerators draw more current at lower voltages (the report cites rails often below 1V), the precision and density of this delivery becomes a gating constraint &mdash; and the content per GPU rises with it.</p>
 <div class="table-scroll"><table>
-<thead><tr><th>Ticker</th><th>Company</th><th>Position in node</th><th>What it wins on</th></tr></thead>
+<thead><tr><th>Ticker</th><th>Company</th><th>HQ</th><th class="num">Shares out.</th><th class="num">Approx. mkt cap</th><th>Filing</th><th>Position in node</th><th>What it wins on</th></tr></thead>
 <tbody>
-<tr><td class="tick">MPWR</td><td class="co">Monolithic Power</td><td>Fast-growing power-delivery supplier into AI GPU boards</td><td>High-density integrated power modules; design-ins on flagship GPUs</td></tr>
-<tr><td class="tick">TXN</td><td class="co">Texas Instruments</td><td>Broadest analog/power catalog; content across the whole rack</td><td>Breadth, in-house manufacturing, and ubiquity of design sockets</td></tr>
-<tr><td class="tick">ADI</td><td class="co">Analog Devices</td><td>High-performance power plus the signal chain around it</td><td>Precision and the ability to bundle power with signal content</td></tr>
-<tr><td class="tick">IFNNY</td><td class="co">Infineon</td><td>Power management that bridges into its discrete-transistor strength</td><td>End-to-end "grid-to-GPU" coverage across analog and discrete</td></tr>
-</tbody>
-</table></div>
+<tr><td class="tick">MPWR</td><td class="co"><a href="https://ir.monolithicpower.com/" target="_blank" rel="noopener">Monolithic Power</a></td><td class="hq">West Palm Beach, FL</td><td class="num">49.1M</td><td class="num">$68.9B</td><td class="file"><a href="https://www.sec.gov/ix?doc=/Archives/edgar/data/0001280452/000162828026053275/mpwr-20260630.htm" target="_blank" rel="noopener">View&nbsp;&#8599;</a></td><td>Fast-growing power-delivery supplier into AI GPU boards</td><td>High-density integrated power modules; design-ins on flagship GPUs</td></tr>
+<tr><td class="tick">TXN</td><td class="co"><a href="https://investor.ti.com/" target="_blank" rel="noopener">Texas Instruments</a></td><td class="hq">Dallas, TX</td><td class="num">913.2M</td><td class="num">$255.3B</td><td class="file"><a href="https://www.sec.gov/ix?doc=/Archives/edgar/data/0000097476/000009747626000152/txn-20260630.htm" target="_blank" rel="noopener">View&nbsp;&#8599;</a></td><td>Broadest analog/power catalog; content across the whole rack</td><td>Breadth, in-house manufacturing, and ubiquity of design sockets</td></tr>
+<tr><td class="tick">ADI</td><td class="co"><a href="https://investor.analog.com/" target="_blank" rel="noopener">Analog Devices</a></td><td class="hq">Wilmington, MA</td><td class="num">487.1M</td><td class="num">$189.7B</td><td class="file"><a href="https://www.sec.gov/ix?doc=/Archives/edgar/data/0000006281/000000628126000052/adi-20260502.htm" target="_blank" rel="noopener">View&nbsp;&#8599;</a></td><td>High-performance power plus the signal chain around it</td><td>Precision and the ability to bundle power with signal content</td></tr>
+<tr><td class="tick">IFNNY</td><td class="co"><a href="https://www.infineon.com/about/investor" target="_blank" rel="noopener">Infineon</a></td><td class="hq">Munich, Germany</td><td class="num">1.09B</td><td class="num">$77.9B</td><td class="file"><a href="https://www.sec.gov/cgi-bin/browse-edgar?CIK=IFNNY&Find=Search&owner=exclude&action=getcompany" target="_blank" rel="noopener">View&nbsp;&#8599;</a></td><td>Power management that bridges into its discrete-transistor strength</td><td>End-to-end &quot;grid-to-GPU&quot; coverage across analog and discrete</td></tr>
+</tbody></table></div>
 <p class="driver"><b>Demand driver</b> &nbsp;Power delivered per rack and the efficiency of delivering it &mdash; rising GPU wattage plus the industry push to waste less energy converting it. Power-management content per accelerator is climbing, making this one of analog's few high-growth AI pockets.</p>
-
 <h2>Signal &amp; interface <span class="node-tag">data converters · clocks · timing</span></h2>
-<p class="narrative">Manages the boundary between analog reality and digital logic &mdash; converting signals and keeping chips <strong>synchronized</strong>. As data rates climb, precise timing and signal integrity move from afterthought to enabler; this is the node the flat "four-bucket" view of the market usually omits.</p>
+<p class="narrative">Manages the boundary between analog reality and digital logic &mdash; converting signals and keeping chips <strong>synchronized</strong>. As data rates climb, precise timing and signal integrity move from afterthought to enabler; this is the node the flat &quot;four-bucket&quot; view of the market usually omits.</p>
 <div class="table-scroll"><table>
-<thead><tr><th>Ticker</th><th>Company</th><th>Position in node</th><th>What it wins on</th></tr></thead>
+<thead><tr><th>Ticker</th><th>Company</th><th>HQ</th><th class="num">Shares out.</th><th class="num">Approx. mkt cap</th><th>Filing</th><th>Position in node</th><th>What it wins on</th></tr></thead>
 <tbody>
-<tr><td class="tick">ADI</td><td class="co">Analog Devices</td><td>High-performance data converters and signal-chain leadership</td><td>Precision at the top end of the ADC/DAC market</td></tr>
-<tr><td class="tick">TXN</td><td class="co">Texas Instruments</td><td>Volume data-converter and interface catalog across the system</td><td>Breadth and availability across countless design sockets</td></tr>
-<tr><td class="tick">SITM</td><td class="co">SiTime</td><td>MEMS timing &mdash; precision clocks and oscillators for high-speed links</td><td>Timing accuracy and resilience over legacy quartz</td></tr>
-<tr><td class="tick">ALAB</td><td class="co">Astera Labs</td><td>Signal-integrity silicon (retimers) &mdash; arguably a cleaner fit here</td><td>Keeping high-speed links clean as reach and rates increase</td></tr>
-</tbody>
-</table></div>
+<tr><td class="tick">ADI</td><td class="co"><a href="https://investor.analog.com/" target="_blank" rel="noopener">Analog Devices</a></td><td class="hq">Wilmington, MA</td><td class="num">487.1M</td><td class="num">$189.7B</td><td class="file"><a href="https://www.sec.gov/ix?doc=/Archives/edgar/data/0000006281/000000628126000052/adi-20260502.htm" target="_blank" rel="noopener">View&nbsp;&#8599;</a></td><td>High-performance data converters and signal-chain leadership</td><td>Precision at the top end of the ADC/DAC market</td></tr>
+<tr><td class="tick">TXN</td><td class="co"><a href="https://investor.ti.com/" target="_blank" rel="noopener">Texas Instruments</a></td><td class="hq">Dallas, TX</td><td class="num">913.2M</td><td class="num">$255.3B</td><td class="file"><a href="https://www.sec.gov/ix?doc=/Archives/edgar/data/0000097476/000009747626000152/txn-20260630.htm" target="_blank" rel="noopener">View&nbsp;&#8599;</a></td><td>Volume data-converter and interface catalog across the system</td><td>Breadth and availability across countless design sockets</td></tr>
+<tr><td class="tick">SITM</td><td class="co"><a href="https://investor.sitime.com/" target="_blank" rel="noopener">SiTime</a></td><td class="hq">Santa Clara, CA</td><td class="num">30.1M</td><td class="num">$21.4B</td><td class="file"><a href="https://www.sec.gov/ix?doc=/Archives/edgar/data/0001451809/000145180926000060/sitm-20260630.htm" target="_blank" rel="noopener">View&nbsp;&#8599;</a></td><td>MEMS timing &mdash; precision clocks and oscillators for high-speed links</td><td>Timing accuracy and resilience over legacy quartz</td></tr>
+<tr><td class="tick">ALAB</td><td class="co"><a href="https://ir.asteralabs.com/" target="_blank" rel="noopener">Astera Labs</a></td><td class="hq">San Jose, CA</td><td class="num">173.5M</td><td class="num">$55.8B</td><td class="file"><a href="https://www.sec.gov/ix?doc=/Archives/edgar/data/0001736297/000173629726000035/alab-20260630.htm" target="_blank" rel="noopener">View&nbsp;&#8599;</a></td><td>Signal-integrity silicon (retimers) &mdash; arguably a cleaner fit here</td><td>Keeping high-speed links clean as reach and rates increase</td></tr>
+</tbody></table></div>
 <p class="driver"><b>Demand driver</b> &nbsp;Link speeds and I/O density &mdash; every jump in data rate raises the bar for conversion, clocking, and signal integrity. Demand tracks the number and speed of high-speed interfaces in the rack, not just the number of GPUs.</p>
 </section>
 
-<!-- =================== DISCRETE =================== -->
 <section id="discrete" style="--bc:var(--discrete)">
 <p class="branch-head" style="--bc:var(--discrete)">Discrete Devices</p>
 <p class="branch-sub">Standalone components that each perform one function. Two sub-nodes carry real AI weight: <strong>optoelectronics</strong>, where the photonics interconnect story lives, and <strong>power transistors</strong>, where the shift to high-voltage rack power is playing out. Sensors round out the branch as the infrastructure's monitoring layer.</p>
-
 <h2>Optoelectronics <span class="node-tag">photonics · optical interconnect</span></h2>
 <p class="narrative">Devices that convert electrical signals to light and back &mdash; the substrate of <strong>optical interconnect</strong>. As copper hits its reach-and-power limits between racks, optics (and co-packaged optics) become structural, not optional; the report flags CPO as an emerging breakthrough for scale-up fabrics. Nvidia has committed on the order of <strong>$4B</strong> to secure this supply, a signal of how load-bearing the node has become.</p>
 <div class="table-scroll"><table>
-<thead><tr><th>Ticker</th><th>Company</th><th>Position in node</th><th>What it wins on</th></tr></thead>
+<thead><tr><th>Ticker</th><th>Company</th><th>HQ</th><th class="num">Shares out.</th><th class="num">Approx. mkt cap</th><th>Filing</th><th>Position in node</th><th>What it wins on</th></tr></thead>
 <tbody>
-<tr><td class="tick">COHR</td><td class="co">Coherent</td><td>Optical transceivers and lasers for data-center interconnect</td><td>Vertical integration from laser chips up to modules</td></tr>
-<tr><td class="tick">LITE</td><td class="co">Lumentum</td><td>Lasers and optical components; a named Nvidia photonics partner</td><td>Laser-source supply as transceiver volumes scale</td></tr>
-<tr><td class="tick">AVGO</td><td class="co">Broadcom</td><td>Optical DSPs and co-packaged optics tied to its switch silicon</td><td>Owning the switch <em>and</em> the optics that feed it</td></tr>
-<tr><td class="tick">MRVL</td><td class="co">Marvell</td><td>Electro-optics and optical DSPs for high-speed links</td><td>Optical content bundled with its interconnect franchise</td></tr>
-</tbody>
-</table></div>
+<tr><td class="tick">COHR</td><td class="co"><a href="https://ir.coherent.com/" target="_blank" rel="noopener">Coherent</a></td><td class="hq">Saxonburg, PA</td><td class="num">195.8M</td><td class="num">$63.8B</td><td class="file"><a href="https://www.sec.gov/ix?doc=/Archives/edgar/data/0000820318/000082031826000020/iivi-20260630.htm" target="_blank" rel="noopener">View&nbsp;&#8599;</a></td><td>Optical transceivers and lasers for data-center interconnect</td><td>Vertical integration from laser chips up to modules</td></tr>
+<tr><td class="tick">LITE</td><td class="co"><a href="https://investor.lumentum.com/overview/default.aspx" target="_blank" rel="noopener">Lumentum</a></td><td class="hq">San Jose, CA</td><td class="num">84.6M</td><td class="num">$78.4B</td><td class="file"><a href="https://www.sec.gov/ix?doc=/Archives/edgar/data/0001633978/000162828026055726/lite-20260811.htm" target="_blank" rel="noopener">View&nbsp;&#8599;</a></td><td>Lasers and optical components; a named Nvidia photonics partner</td><td>Laser-source supply as transceiver volumes scale</td></tr>
+<tr><td class="tick">AVGO</td><td class="co"><a href="https://investors.broadcom.com/" target="_blank" rel="noopener">Broadcom</a></td><td class="hq">Palo Alto, CA</td><td class="num">4.76B</td><td class="num">$1.87T</td><td class="file"><a href="https://www.sec.gov/ix?doc=/Archives/edgar/data/0001730168/000173016826000054/avgo-20260503.htm" target="_blank" rel="noopener">View&nbsp;&#8599;</a></td><td>Optical DSPs and co-packaged optics tied to its switch silicon</td><td>Owning the switch <em>and</em> the optics that feed it</td></tr>
+<tr><td class="tick">MRVL</td><td class="co"><a href="https://investor.marvell.com/" target="_blank" rel="noopener">Marvell</a></td><td class="hq">Wilmington, DE</td><td class="num">874.8M</td><td class="num">$194.2B</td><td class="file"><a href="https://investor.marvell.com/sec-filings/all-sec-filings/content/0001835632-26-000019/mrvl-20260502.htm" target="_blank" rel="noopener">View&nbsp;&#8599;</a></td><td>Electro-optics and optical DSPs for high-speed links</td><td>Optical content bundled with its interconnect franchise</td></tr>
+</tbody></table></div>
 <p class="driver"><b>Demand driver</b> &nbsp;Interconnect bandwidth and reach at data-center scale &mdash; the point at which electrons through copper become too lossy or power-hungry, and light takes over. Rising cluster size pulls optics content up faster than GPU units.</p>
-
 <h2>Power transistors <span class="node-tag">GaN · SiC · discrete power</span></h2>
 <p class="narrative">Single-function devices that switch and convert high power efficiently. The catalyst here is the move to <strong>800V HVDC</strong> rack architectures &mdash; the report notes racks are heading toward 1&nbsp;MW versus the 100&ndash;120&nbsp;kW of today's most powerful racks &mdash; using wide-bandgap materials (GaN, SiC) that carry AI-scale power with far less copper and loss than legacy silicon.</p>
 <div class="table-scroll"><table>
-<thead><tr><th>Ticker</th><th>Company</th><th>Position in node</th><th>What it wins on</th></tr></thead>
+<thead><tr><th>Ticker</th><th>Company</th><th>HQ</th><th class="num">Shares out.</th><th class="num">Approx. mkt cap</th><th>Filing</th><th>Position in node</th><th>What it wins on</th></tr></thead>
 <tbody>
-<tr><td class="tick">IFNNY</td><td class="co">Infineon</td><td>Discrete power leader across the grid-to-GPU chain</td><td>Scale, breadth, and depth in both silicon and wide-bandgap power</td></tr>
-<tr><td class="tick">NVTS</td><td class="co">Navitas</td><td>GaN/SiC pure-play; named collaborator on Nvidia's 800V HVDC</td><td>Wide-bandgap focus aimed squarely at next-gen rack power</td></tr>
-<tr><td class="tick">ON</td><td class="co">onsemi</td><td>Silicon-carbide supplier for high-power conversion</td><td>Vertically integrated SiC for power-dense systems</td></tr>
-<tr><td class="tick">STM</td><td class="co">STMicroelectronics</td><td>Broad SiC and power-discrete portfolio</td><td>Manufacturing scale across power and wide-bandgap</td></tr>
-</tbody>
-</table></div>
+<tr><td class="tick">IFNNY</td><td class="co"><a href="https://www.infineon.com/about/investor" target="_blank" rel="noopener">Infineon</a></td><td class="hq">Munich, Germany</td><td class="num">1.09B</td><td class="num">$77.9B</td><td class="file"><a href="https://www.sec.gov/cgi-bin/browse-edgar?CIK=IFNNY&Find=Search&owner=exclude&action=getcompany" target="_blank" rel="noopener">View&nbsp;&#8599;</a></td><td>Discrete power leader across the grid-to-GPU chain</td><td>Scale, breadth, and depth in both silicon and wide-bandgap power</td></tr>
+<tr><td class="tick">NVTS</td><td class="co"><a href="https://ir.navitassemi.com/" target="_blank" rel="noopener">Navitas</a></td><td class="hq">Torrance, CA</td><td class="num">261.1M</td><td class="num">$3.8B</td><td class="file"><a href="https://ir.navitassemi.com/node/11911/html" target="_blank" rel="noopener">View&nbsp;&#8599;</a></td><td>GaN/SiC pure-play; named collaborator on Nvidia's 800V HVDC</td><td>Wide-bandgap focus aimed squarely at next-gen rack power</td></tr>
+<tr><td class="tick">ON</td><td class="co"><a href="https://investor.onsemi.com/" target="_blank" rel="noopener">onsemi</a></td><td class="hq">Scottsdale, AZ</td><td class="num">389.3M</td><td class="num">$32.2B</td><td class="file"><a href="https://www.sec.gov/ix?doc=/Archives/edgar/data/0001097864/000109786426000017/on-20260703.htm" target="_blank" rel="noopener">View&nbsp;&#8599;</a></td><td>Silicon-carbide supplier for high-power conversion</td><td>Vertically integrated SiC for power-dense systems</td></tr>
+<tr><td class="tick">STM</td><td class="co"><a href="https://investors.st.com/" target="_blank" rel="noopener">STMicroelectronics</a></td><td class="hq">The Netherlands</td><td class="num">892.5M</td><td class="num">$48.5B</td><td class="file"><a href="https://investors.st.com/node/19011/html" target="_blank" rel="noopener">View&nbsp;&#8599;</a></td><td>Broad SiC and power-discrete portfolio</td><td>Manufacturing scale across power and wide-bandgap</td></tr>
+</tbody></table></div>
 <p class="driver"><b>Demand driver</b> &nbsp;The 800V power transition and total rack wattage &mdash; higher voltage cuts copper and loss, and wide-bandgap devices are what make it work. Note the cross-current: as an emerging theme, the near-term 800V TAM is debated even as the long-run direction is clear.</p>
-
 <h2>Sensors &amp; transducers <span class="node-tag">monitoring · current sensing · thermal</span></h2>
 <p class="narrative">Devices that detect and convert physical signals into data &mdash; the <strong>monitoring layer</strong> of the data center. Less directly tied to AI compute than the other discrete nodes, but rising with the buildout as denser, hotter, higher-power racks (and the liquid-cooled CDU trays in the report) need more telemetry to run safely.</p>
 <div class="table-scroll"><table>
-<thead><tr><th>Ticker</th><th>Company</th><th>Position in node</th><th>What it wins on</th></tr></thead>
+<thead><tr><th>Ticker</th><th>Company</th><th>HQ</th><th class="num">Shares out.</th><th class="num">Approx. mkt cap</th><th>Filing</th><th>Position in node</th><th>What it wins on</th></tr></thead>
 <tbody>
-<tr><td class="tick">TEL</td><td class="co">TE Connectivity</td><td>Sensors and connectivity for infrastructure and thermal systems</td><td>Breadth across sensing and the connectors around it</td></tr>
-<tr><td class="tick">STM</td><td class="co">STMicroelectronics</td><td>MEMS and sensor portfolio spanning the physical layer</td><td>MEMS scale and integration</td></tr>
-<tr><td class="tick">IFNNY</td><td class="co">Infineon</td><td>Current-sensing and monitoring that pairs with its power content</td><td>Bundling sensing with the power devices it already sells</td></tr>
-</tbody>
-</table></div>
+<tr><td class="tick">TEL</td><td class="co"><a href="https://investors.te.com/overview/default.aspx" target="_blank" rel="noopener">TE Connectivity</a></td><td class="hq">Galway, Ireland</td><td class="num">289.5M</td><td class="num">$62.6B</td><td class="file"><a href="https://www.sec.gov/edgar/browse/?CIK=1385157&owner=exclude" target="_blank" rel="noopener">View&nbsp;&#8599;</a></td><td>Sensors and connectivity for infrastructure and thermal systems</td><td>Breadth across sensing and the connectors around it</td></tr>
+<tr><td class="tick">STM</td><td class="co"><a href="https://investors.st.com/" target="_blank" rel="noopener">STMicroelectronics</a></td><td class="hq">The Netherlands</td><td class="num">892.5M</td><td class="num">$48.5B</td><td class="file"><a href="https://investors.st.com/node/19011/html" target="_blank" rel="noopener">View&nbsp;&#8599;</a></td><td>MEMS and sensor portfolio spanning the physical layer</td><td>MEMS scale and integration</td></tr>
+<tr><td class="tick">IFNNY</td><td class="co"><a href="https://www.infineon.com/about/investor" target="_blank" rel="noopener">Infineon</a></td><td class="hq">Munich, Germany</td><td class="num">1.09B</td><td class="num">$77.9B</td><td class="file"><a href="https://www.sec.gov/cgi-bin/browse-edgar?CIK=IFNNY&Find=Search&owner=exclude&action=getcompany" target="_blank" rel="noopener">View&nbsp;&#8599;</a></td><td>Current-sensing and monitoring that pairs with its power content</td><td>Bundling sensing with the power devices it already sells</td></tr>
+</tbody></table></div>
 <p class="driver"><b>Demand driver</b> &nbsp;Rack density, power, and thermal load &mdash; hotter, denser deployments need more environmental, current, and thermal sensing. Demand scales with facility buildout and cooling complexity rather than compute directly.</p>
 </section>
-
-<!-- =================== SYNTHESIS =================== -->
+<section id="mktcap" style="--bc:var(--lavender)">
+<div class="figure-block">
+<p class="fig-label">Figure 2. Market capitalization by company, grouped by sector</p>
+<p class="fig-sub">Each bubble is a company in that sector; several firms appear in more than one sector, mirroring the tables above. Both vertical position and bubble area encode approximate market capitalization on a <em>log</em> scale &mdash; so equal visual steps are multiplicative, and the largest names tower over the rest by more than the picture suggests.</p>
+<div class="bubble-wrap">
+<svg viewBox="0 0 1040 624" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Market cap by company and sector">
+<line x1="70" y1="470.0" x2="1016" y2="470.0" stroke="var(--rule)" stroke-width="1"/>
+<text x="62" y="473.0" text-anchor="end" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" fill="var(--grey-4)">$1B</text>
+<line x1="70" y1="365.5" x2="1016" y2="365.5" stroke="var(--rule)" stroke-width="1"/>
+<text x="62" y="368.5" text-anchor="end" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" fill="var(--grey-4)">$10B</text>
+<line x1="70" y1="261.0" x2="1016" y2="261.0" stroke="var(--rule)" stroke-width="1"/>
+<text x="62" y="264.0" text-anchor="end" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" fill="var(--grey-4)">$100B</text>
+<line x1="70" y1="156.5" x2="1016" y2="156.5" stroke="var(--rule)" stroke-width="1"/>
+<text x="62" y="159.5" text-anchor="end" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" fill="var(--grey-4)">$1T</text>
+<line x1="70" y1="52.0" x2="1016" y2="52.0" stroke="var(--rule)" stroke-width="1"/>
+<text x="62" y="55.0" text-anchor="end" font-family="Helvetica Neue,Arial,sans-serif" font-size="10" fill="var(--grey-4)">$10T</text>
+<text x="16" y="261" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10.5" fill="var(--grey-4)" transform="rotate(-90 16 261)" letter-spacing="0.5">MARKET CAPITALIZATION &#183; LOG SCALE</text>
+<circle cx="656" cy="26" r="6" fill="#8aa9d6" fill-opacity="0.6" stroke="#8aa9d6"/>
+<text x="667" y="30" font-family="Helvetica Neue,Arial,sans-serif" font-size="11" fill="var(--grey-2)">Digital</text>
+<circle cx="748" cy="26" r="6" fill="#d99bce" fill-opacity="0.6" stroke="#d99bce"/>
+<text x="759" y="30" font-family="Helvetica Neue,Arial,sans-serif" font-size="11" fill="var(--grey-2)">Memory</text>
+<circle cx="840" cy="26" r="6" fill="#9fd0a0" fill-opacity="0.6" stroke="#9fd0a0"/>
+<text x="851" y="30" font-family="Helvetica Neue,Arial,sans-serif" font-size="11" fill="var(--grey-2)">Analog</text>
+<circle cx="932" cy="26" r="6" fill="#8fd6c4" fill-opacity="0.6" stroke="#8fd6c4"/>
+<text x="943" y="30" font-family="Helvetica Neue,Arial,sans-serif" font-size="11" fill="var(--grey-2)">Discrete</text>
+<rect x="106.6" y="484.0" width="32" height="3" rx="1.5" fill="#8aa9d6"/>
+<text x="122.6" y="500.0" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10.5" fill="var(--grey-2)">Parallel</text>
+<text x="122.6" y="513.0" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10.5" fill="var(--grey-2)">accelerators</text>
+<circle cx="91.0" cy="79.5" r="24.7" fill="#8aa9d6" fill-opacity="0.5" stroke="#8aa9d6" stroke-width="1.4"><title>NVDA — Nvidia: $5.45T</title></circle>
+<circle cx="106.8" cy="128.1" r="22.4" fill="#8aa9d6" fill-opacity="0.5" stroke="#8aa9d6" stroke-width="1.4"><title>AVGO — Broadcom: $1.87T</title></circle>
+<circle cx="122.6" cy="164.4" r="20.6" fill="#8aa9d6" fill-opacity="0.5" stroke="#8aa9d6" stroke-width="1.4"><title>AMD — AMD: $839.7B</title></circle>
+<circle cx="138.3" cy="230.9" r="17.4" fill="#8aa9d6" fill-opacity="0.5" stroke="#8aa9d6" stroke-width="1.4"><title>MRVL — Marvell: $194.2B</title></circle>
+<circle cx="154.1" cy="337.5" r="12.3" fill="#8aa9d6" fill-opacity="0.5" stroke="#8aa9d6" stroke-width="1.4"><title>LSCC — Lattice: $18.5B</title></circle>
+<text x="91.0" y="113.7" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" font-weight="600" fill="#e8e8ef" stroke="var(--paper)" stroke-width="2.4" paint-order="stroke" style="stroke-linejoin:round">NVDA</text>
+<text x="106.8" y="160.0" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" font-weight="600" fill="#e8e8ef" stroke="var(--paper)" stroke-width="2.4" paint-order="stroke" style="stroke-linejoin:round">AVGO</text>
+<text x="122.6" y="194.5" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" font-weight="600" fill="#e8e8ef" stroke="var(--paper)" stroke-width="2.4" paint-order="stroke" style="stroke-linejoin:round">AMD</text>
+<text x="138.3" y="257.8" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" font-weight="600" fill="#e8e8ef" stroke="var(--paper)" stroke-width="2.4" paint-order="stroke" style="stroke-linejoin:round">MRVL</text>
+<text x="154.1" y="359.3" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" font-weight="600" fill="#e8e8ef" stroke="var(--paper)" stroke-width="2.4" paint-order="stroke" style="stroke-linejoin:round">LSCC</text>
+<rect x="211.7" y="484.0" width="32" height="3" rx="1.5" fill="#8aa9d6"/>
+<text x="227.7" y="500.0" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10.5" fill="var(--grey-2)">Serial</text>
+<text x="227.7" y="513.0" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10.5" fill="var(--grey-2)">processors</text>
+<circle cx="196.1" cy="164.4" r="20.6" fill="#8aa9d6" fill-opacity="0.5" stroke="#8aa9d6" stroke-width="1.4"><title>AMD — AMD: $839.7B</title></circle>
+<circle cx="217.2" cy="186.9" r="19.5" fill="#8aa9d6" fill-opacity="0.5" stroke="#8aa9d6" stroke-width="1.4"><title>INTC — Intel: $511.9B</title></circle>
+<circle cx="238.2" cy="211.4" r="18.4" fill="#8aa9d6" fill-opacity="0.5" stroke="#8aa9d6" stroke-width="1.4"><title>ARM — Arm Holdings: $298.4B</title></circle>
+<circle cx="259.2" cy="235.5" r="17.2" fill="#8aa9d6" fill-opacity="0.5" stroke="#8aa9d6" stroke-width="1.4"><title>QCOM — Qualcomm: $175.2B</title></circle>
+<text x="196.1" y="194.5" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" font-weight="600" fill="#e8e8ef" stroke="var(--paper)" stroke-width="2.4" paint-order="stroke" style="stroke-linejoin:round">AMD</text>
+<text x="217.2" y="215.9" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" font-weight="600" fill="#e8e8ef" stroke="var(--paper)" stroke-width="2.4" paint-order="stroke" style="stroke-linejoin:round">INTC</text>
+<text x="238.2" y="239.3" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" font-weight="600" fill="#e8e8ef" stroke="var(--paper)" stroke-width="2.4" paint-order="stroke" style="stroke-linejoin:round">ARM</text>
+<text x="259.2" y="262.3" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" font-weight="600" fill="#e8e8ef" stroke="var(--paper)" stroke-width="2.4" paint-order="stroke" style="stroke-linejoin:round">QCOM</text>
+<rect x="316.8" y="484.0" width="32" height="3" rx="1.5" fill="#8aa9d6"/>
+<text x="332.8" y="500.0" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10.5" fill="var(--grey-2)">Networking</text>
+<text x="332.8" y="513.0" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10.5" fill="var(--grey-2)">silicon</text>
+<circle cx="301.2" cy="79.5" r="24.7" fill="#8aa9d6" fill-opacity="0.5" stroke="#8aa9d6" stroke-width="1.4"><title>NVDA — Nvidia: $5.45T</title></circle>
+<circle cx="317.0" cy="128.1" r="22.4" fill="#8aa9d6" fill-opacity="0.5" stroke="#8aa9d6" stroke-width="1.4"><title>AVGO — Broadcom: $1.87T</title></circle>
+<circle cx="332.8" cy="219.3" r="18.0" fill="#8aa9d6" fill-opacity="0.5" stroke="#8aa9d6" stroke-width="1.4"><title>ANET — Arista Networks: $250.8B</title></circle>
+<circle cx="348.5" cy="230.9" r="17.4" fill="#8aa9d6" fill-opacity="0.5" stroke="#8aa9d6" stroke-width="1.4"><title>MRVL — Marvell: $194.2B</title></circle>
+<circle cx="364.3" cy="287.5" r="14.7" fill="#8aa9d6" fill-opacity="0.5" stroke="#8aa9d6" stroke-width="1.4"><title>ALAB — Astera Labs: $55.8B</title></circle>
+<text x="301.2" y="113.7" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" font-weight="600" fill="#e8e8ef" stroke="var(--paper)" stroke-width="2.4" paint-order="stroke" style="stroke-linejoin:round">NVDA</text>
+<text x="317.0" y="160.0" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" font-weight="600" fill="#e8e8ef" stroke="var(--paper)" stroke-width="2.4" paint-order="stroke" style="stroke-linejoin:round">AVGO</text>
+<text x="332.8" y="246.8" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" font-weight="600" fill="#e8e8ef" stroke="var(--paper)" stroke-width="2.4" paint-order="stroke" style="stroke-linejoin:round">ANET</text>
+<text x="348.5" y="257.8" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" font-weight="600" fill="#e8e8ef" stroke="var(--paper)" stroke-width="2.4" paint-order="stroke" style="stroke-linejoin:round">MRVL</text>
+<text x="364.3" y="311.7" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" font-weight="600" fill="#e8e8ef" stroke="var(--paper)" stroke-width="2.4" paint-order="stroke" style="stroke-linejoin:round">ALAB</text>
+<rect x="421.9" y="484.0" width="32" height="3" rx="1.5" fill="#d99bce"/>
+<text x="437.9" y="500.0" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10.5" fill="var(--grey-2)">Memory</text>
+<text x="437.9" y="513.0" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10.5" fill="var(--grey-2)">makers</text>
+<circle cx="406.4" cy="147.8" r="21.4" fill="#d99bce" fill-opacity="0.5" stroke="#d99bce" stroke-width="1.4"><title>SKHY — SK Hynix: $1.21T</title></circle>
+<circle cx="427.4" cy="149.9" r="21.3" fill="#d99bce" fill-opacity="0.5" stroke="#d99bce" stroke-width="1.4"><title>005930.KS — Samsung: $1.16T</title></circle>
+<circle cx="448.4" cy="152.3" r="21.2" fill="#d99bce" fill-opacity="0.5" stroke="#d99bce" stroke-width="1.4"><title>MU — Micron: $1.10T</title></circle>
+<circle cx="469.4" cy="221.3" r="17.9" fill="#d99bce" fill-opacity="0.5" stroke="#d99bce" stroke-width="1.4"><title>SNDK — SanDisk: $239.6B</title></circle>
+<text x="406.4" y="178.7" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" font-weight="600" fill="#e8e8ef" stroke="var(--paper)" stroke-width="2.4" paint-order="stroke" style="stroke-linejoin:round">SKHY</text>
+<text x="427.4" y="191.2" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" font-weight="600" fill="#e8e8ef" stroke="var(--paper)" stroke-width="2.4" paint-order="stroke" style="stroke-linejoin:round">005930.KS</text>
+<text x="448.4" y="204.0" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" font-weight="600" fill="#e8e8ef" stroke="var(--paper)" stroke-width="2.4" paint-order="stroke" style="stroke-linejoin:round">MU</text>
+<text x="469.4" y="248.7" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" font-weight="600" fill="#e8e8ef" stroke="var(--paper)" stroke-width="2.4" paint-order="stroke" style="stroke-linejoin:round">SNDK</text>
+<rect x="527.0" y="484.0" width="32" height="3" rx="1.5" fill="#9fd0a0"/>
+<text x="543.0" y="500.0" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10.5" fill="var(--grey-2)">Power</text>
+<text x="543.0" y="513.0" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10.5" fill="var(--grey-2)">management</text>
+<circle cx="511.5" cy="218.5" r="18.0" fill="#9fd0a0" fill-opacity="0.5" stroke="#9fd0a0" stroke-width="1.4"><title>TXN — Texas Instruments: $255.3B</title></circle>
+<circle cx="532.5" cy="231.9" r="17.4" fill="#9fd0a0" fill-opacity="0.5" stroke="#9fd0a0" stroke-width="1.4"><title>ADI — Analog Devices: $189.7B</title></circle>
+<circle cx="553.5" cy="272.3" r="15.5" fill="#9fd0a0" fill-opacity="0.5" stroke="#9fd0a0" stroke-width="1.4"><title>IFNNY — Infineon: $77.9B</title></circle>
+<circle cx="574.5" cy="277.9" r="15.2" fill="#9fd0a0" fill-opacity="0.5" stroke="#9fd0a0" stroke-width="1.4"><title>MPWR — Monolithic Power: $68.9B</title></circle>
+<text x="511.5" y="246.0" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" font-weight="600" fill="#e8e8ef" stroke="var(--paper)" stroke-width="2.4" paint-order="stroke" style="stroke-linejoin:round">TXN</text>
+<text x="532.5" y="258.8" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" font-weight="600" fill="#e8e8ef" stroke="var(--paper)" stroke-width="2.4" paint-order="stroke" style="stroke-linejoin:round">ADI</text>
+<text x="553.5" y="297.3" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" font-weight="600" fill="#e8e8ef" stroke="var(--paper)" stroke-width="2.4" paint-order="stroke" style="stroke-linejoin:round">IFNNY</text>
+<text x="574.5" y="313.1" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" font-weight="600" fill="#e8e8ef" stroke="var(--paper)" stroke-width="2.4" paint-order="stroke" style="stroke-linejoin:round">MPWR</text>
+<rect x="632.1" y="484.0" width="32" height="3" rx="1.5" fill="#9fd0a0"/>
+<text x="648.1" y="500.0" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10.5" fill="var(--grey-2)">Signal &amp;</text>
+<text x="648.1" y="513.0" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10.5" fill="var(--grey-2)">interface</text>
+<circle cx="616.6" cy="218.5" r="18.0" fill="#9fd0a0" fill-opacity="0.5" stroke="#9fd0a0" stroke-width="1.4"><title>TXN — Texas Instruments: $255.3B</title></circle>
+<circle cx="637.6" cy="231.9" r="17.4" fill="#9fd0a0" fill-opacity="0.5" stroke="#9fd0a0" stroke-width="1.4"><title>ADI — Analog Devices: $189.7B</title></circle>
+<circle cx="658.6" cy="287.5" r="14.7" fill="#9fd0a0" fill-opacity="0.5" stroke="#9fd0a0" stroke-width="1.4"><title>ALAB — Astera Labs: $55.8B</title></circle>
+<circle cx="679.6" cy="331.0" r="12.7" fill="#9fd0a0" fill-opacity="0.5" stroke="#9fd0a0" stroke-width="1.4"><title>SITM — SiTime: $21.4B</title></circle>
+<text x="616.6" y="246.0" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" font-weight="600" fill="#e8e8ef" stroke="var(--paper)" stroke-width="2.4" paint-order="stroke" style="stroke-linejoin:round">TXN</text>
+<text x="637.6" y="258.8" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" font-weight="600" fill="#e8e8ef" stroke="var(--paper)" stroke-width="2.4" paint-order="stroke" style="stroke-linejoin:round">ADI</text>
+<text x="658.6" y="311.7" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" font-weight="600" fill="#e8e8ef" stroke="var(--paper)" stroke-width="2.4" paint-order="stroke" style="stroke-linejoin:round">ALAB</text>
+<text x="679.6" y="353.1" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" font-weight="600" fill="#e8e8ef" stroke="var(--paper)" stroke-width="2.4" paint-order="stroke" style="stroke-linejoin:round">SITM</text>
+<rect x="737.2" y="484.0" width="32" height="3" rx="1.5" fill="#8fd6c4"/>
+<text x="753.2" y="500.0" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10.5" fill="var(--grey-2)">Opto-</text>
+<text x="753.2" y="513.0" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10.5" fill="var(--grey-2)">electronics</text>
+<circle cx="721.7" cy="128.1" r="22.4" fill="#8fd6c4" fill-opacity="0.5" stroke="#8fd6c4" stroke-width="1.4"><title>AVGO — Broadcom: $1.87T</title></circle>
+<circle cx="742.7" cy="230.9" r="17.4" fill="#8fd6c4" fill-opacity="0.5" stroke="#8fd6c4" stroke-width="1.4"><title>MRVL — Marvell: $194.2B</title></circle>
+<circle cx="763.7" cy="272.1" r="15.5" fill="#8fd6c4" fill-opacity="0.5" stroke="#8fd6c4" stroke-width="1.4"><title>LITE — Lumentum: $78.4B</title></circle>
+<circle cx="784.8" cy="281.4" r="15.0" fill="#8fd6c4" fill-opacity="0.5" stroke="#8fd6c4" stroke-width="1.4"><title>COHR — Coherent: $63.8B</title></circle>
+<text x="721.7" y="160.0" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" font-weight="600" fill="#e8e8ef" stroke="var(--paper)" stroke-width="2.4" paint-order="stroke" style="stroke-linejoin:round">AVGO</text>
+<text x="742.7" y="257.8" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" font-weight="600" fill="#e8e8ef" stroke="var(--paper)" stroke-width="2.4" paint-order="stroke" style="stroke-linejoin:round">MRVL</text>
+<text x="763.7" y="297.0" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" font-weight="600" fill="#e8e8ef" stroke="var(--paper)" stroke-width="2.4" paint-order="stroke" style="stroke-linejoin:round">LITE</text>
+<text x="784.8" y="316.4" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" font-weight="600" fill="#e8e8ef" stroke="var(--paper)" stroke-width="2.4" paint-order="stroke" style="stroke-linejoin:round">COHR</text>
+<rect x="842.3" y="484.0" width="32" height="3" rx="1.5" fill="#8fd6c4"/>
+<text x="858.3" y="500.0" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10.5" fill="var(--grey-2)">Power</text>
+<text x="858.3" y="513.0" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10.5" fill="var(--grey-2)">transistors</text>
+<circle cx="826.8" cy="272.3" r="15.5" fill="#8fd6c4" fill-opacity="0.5" stroke="#8fd6c4" stroke-width="1.4"><title>IFNNY — Infineon: $77.9B</title></circle>
+<circle cx="847.8" cy="293.9" r="14.4" fill="#8fd6c4" fill-opacity="0.5" stroke="#8fd6c4" stroke-width="1.4"><title>STM — STMicroelectronics: $48.5B</title></circle>
+<circle cx="868.8" cy="312.5" r="13.5" fill="#8fd6c4" fill-opacity="0.5" stroke="#8fd6c4" stroke-width="1.4"><title>ON — onsemi: $32.2B</title></circle>
+<circle cx="889.9" cy="409.7" r="8.9" fill="#8fd6c4" fill-opacity="0.5" stroke="#8fd6c4" stroke-width="1.4"><title>NVTS — Navitas: $3.8B</title></circle>
+<text x="826.8" y="297.3" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" font-weight="600" fill="#e8e8ef" stroke="var(--paper)" stroke-width="2.4" paint-order="stroke" style="stroke-linejoin:round">IFNNY</text>
+<text x="847.8" y="317.8" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" font-weight="600" fill="#e8e8ef" stroke="var(--paper)" stroke-width="2.4" paint-order="stroke" style="stroke-linejoin:round">STM</text>
+<text x="868.8" y="335.5" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" font-weight="600" fill="#e8e8ef" stroke="var(--paper)" stroke-width="2.4" paint-order="stroke" style="stroke-linejoin:round">ON</text>
+<text x="889.9" y="428.1" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" font-weight="600" fill="#e8e8ef" stroke="var(--paper)" stroke-width="2.4" paint-order="stroke" style="stroke-linejoin:round">NVTS</text>
+<rect x="947.4" y="484.0" width="32" height="3" rx="1.5" fill="#8fd6c4"/>
+<text x="963.4" y="500.0" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10.5" fill="var(--grey-2)">Sensors &amp;</text>
+<text x="963.4" y="513.0" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="10.5" fill="var(--grey-2)">transducers</text>
+<circle cx="931.9" cy="272.3" r="15.5" fill="#8fd6c4" fill-opacity="0.5" stroke="#8fd6c4" stroke-width="1.4"><title>IFNNY — Infineon: $77.9B</title></circle>
+<circle cx="963.4" cy="282.3" r="15.0" fill="#8fd6c4" fill-opacity="0.5" stroke="#8fd6c4" stroke-width="1.4"><title>TEL — TE Connectivity: $62.6B</title></circle>
+<circle cx="995.0" cy="293.9" r="14.4" fill="#8fd6c4" fill-opacity="0.5" stroke="#8fd6c4" stroke-width="1.4"><title>STM — STMicroelectronics: $48.5B</title></circle>
+<text x="931.9" y="297.3" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" font-weight="600" fill="#e8e8ef" stroke="var(--paper)" stroke-width="2.4" paint-order="stroke" style="stroke-linejoin:round">IFNNY</text>
+<text x="963.4" y="317.2" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" font-weight="600" fill="#e8e8ef" stroke="var(--paper)" stroke-width="2.4" paint-order="stroke" style="stroke-linejoin:round">TEL</text>
+<text x="995.0" y="328.3" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="9" font-weight="600" fill="#e8e8ef" stroke="var(--paper)" stroke-width="2.4" paint-order="stroke" style="stroke-linejoin:round">STM</text>
+</svg>
+</div>
+<p class="fig-cap">Market cap = shares outstanding &times; closing price, computed from the Aperture Insights tracker as of the <strong>8/14/2026</strong> close; figures are approximate and self-computed. <strong>SK&nbsp;Hynix</strong> uses ADR-equivalent shares (10 ADRs = 1 ordinary share; the ADR line carries a premium to the Korea-listed shares). <strong>Samsung</strong> is USD-converted from its KRW listing at the 8/14/2026 spot rate of &#8361;1,417.53 per US$1. A few inputs still warrant reconfirmation against filings (e.g. Intel's price/cap). Log scale spans $1B&ndash;$10T. <code>Not investment advice.</code></p>
+</div>
+</section>
 <section id="synthesis" style="--bc:var(--lavender)">
 <p class="branch-head" style="--bc:var(--lavender)">The dollar's path through the stack</p>
 <div class="stat-row">
 <div class="stat"><div class="big">~95%</div><div class="lab">Of rack content value is semiconductors</div><div class="fine">A leading rack holds 4,500+ chips / ~20,000 dies (SIA/Deloitte)</div></div>
-<div class="stat"><div class="big">&gt;70%</div><div class="lab">Semi value in the AI accelerator</div><div class="fine">Logic overall ≈ 65%; memory &amp; storage &gt; 20% of semi value</div></div>
+<div class="stat"><div class="big">&gt;70%</div><div class="lab">Semi value in the AI accelerator</div><div class="fine">Logic overall &#8776; 65%; memory &amp; storage &gt; 20% of semi value</div></div>
 <div class="stat"><div class="big">$2.8T</div><div class="lab">Semi spend, 2023&ndash;2030</div><div class="fine">Of ~$4T total AI data-center investment (SIA/Deloitte)</div></div>
 </div>
 <div class="commentary"><h4>How to read the map</h4>
@@ -348,8 +424,7 @@ footer a:hover { border-color:var(--lavender); }
 <p><strong>Two structural cautions.</strong> First, leadership here is a matter of degree and moves &mdash; HBM qualification, ASIC design wins, and the 800V transition are all live contests, not settled ones. Second, several names span nodes, so a single company's exposure to "AI" is a blend across this map rather than a single line. Upstream of everything shown sits the equipment and foundry layer (ASML's lithography, TSMC's fabrication) that makes every one of these chips physically possible.</p>
 </div>
 </section>
-
-<footer>A company-level companion to the AI-chip taxonomy in Figure&nbsp;3 of <a href="https://www.semiconductors.org/wp-content/uploads/2026/06/SIA-AI-Data-Center-Report_June-2026.pdf" target="_blank" rel="noopener">SIA &amp; Deloitte, <em>Powering AI: The Semiconductor Ecosystem at the Foundation of Data Centers</em> (June 2026)</a> &mdash; the primary source for the taxonomy structure, rack economics, and the figures cited above. Node structure follows the report's Digital / Analog / Discrete classification, including its Note&nbsp;3 treatment of networking under Logic. Company placements reflect business focus and are indicative, not exhaustive; a firm may lead in one node and participate in several. Tickers identify securities for reference only. <code>Not investment advice</code> &mdash; this page illustrates market structure from public information and should not be used as the basis for any transaction.</footer>
+<footer>A company-level companion to the AI-chip taxonomy in Figure&nbsp;3 of <a href="https://www.semiconductors.org/wp-content/uploads/2026/06/SIA-AI-Data-Center-Report_June-2026.pdf" target="_blank" rel="noopener">SIA &amp; Deloitte, <em>Powering AI: The Semiconductor Ecosystem at the Foundation of Data Centers</em> (June 2026)</a> &mdash; the primary source for the taxonomy structure, rack economics, and the figures cited above. Node structure follows the report's Digital / Analog / Discrete classification, including its Note&nbsp;3 treatment of networking under Logic. Company placements reflect business focus and are indicative, not exhaustive; a firm may lead in one node and participate in several. Headquarters, shares outstanding, market caps, and filing links are compiled from company filings and market data as of the 8/14/2026 close and are approximate. Tickers identify securities for reference only. <code>Not investment advice</code> &mdash; this page illustrates market structure from public information and should not be used as the basis for any transaction.</footer>
 </main>
 </body>
 </html>
